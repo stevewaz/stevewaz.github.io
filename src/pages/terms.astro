@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import Draft from '../components/Draft.astro';
+import { site, href } from '../config';
+---
+<Base title="Terms" description="The terms for using our apps.">
+  <section class="wrap section narrow prose">
+    <h1>Terms of use</h1>
+    <Draft />
+    <p>These terms cover your use of {site.name}'s apps and website. By using them you agree to the terms below.</p>
+
+    <h2>Using the apps</h2>
+    <ul>
+      <li>You may use the apps for lawful purposes, and for your own kennel, team, family or household.</li>
+      <li>You are responsible for your account and for what you enter. Keep your password private.</li>
+      <li>Do not misuse the apps, try to break into them, or use them to harm others.</li>
+    </ul>
+
+    <h2>Your information</h2>
+    <p>What you enter is yours. You give us permission to store and process it so the apps can work, as described in our <a href={href('privacy/')}>Privacy</a> page. For businesses, you are responsible for the accuracy of your records, including vaccination dates and invoices.</p>
+
+    <h2>Early access</h2>
+    <p>Some apps are in early access. They may change, and features may be added or removed. We work to keep your information safe, but you should keep your own copies of anything important, such as by using an app's export.</p>
+
+    <h2>Paid plans</h2>
+    <p>If an app has a paid plan, its price and billing period will be shown before you pay. See our <a href={href('refunds/')}>Refunds</a> page. You can cancel at any time.</p>
+
+    <h2>No warranty and limits</h2>
+    <p>The apps are provided "as is", without promises that they will always be available or error-free. To the extent the law allows, we are not liable for indirect or consequential losses, and our total liability is limited to what you paid us in the previous twelve months.</p>
+
+    <h2>Ending your use</h2>
+    <p>You can stop using the apps at any time. We may suspend accounts that break these terms.</p>
+
+    <h2>Changes and contact</h2>
+    <p>We may update these terms and will post the new version here. Questions: <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.</p>
+  </section>
+</Base>

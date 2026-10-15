@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, apps, href } from '../config';
+---
+<Base title="Support" description="Get help or share an idea.">
+  <section class="wrap section narrow">
+    <h1>Support</h1>
+    <p class="lead">Something not working, or an idea to make an app better? We read everything.</p>
+    <p><a class="btn primary" href={`mailto:${site.contactEmail}`}>Email {site.contactEmail}</a></p>
+    <p class="muted">Tell us which app, what device and browser you are using, and what you expected to happen. A screenshot helps.</p>
+
+    <h2>Quick answers</h2>
+    <h3>How do I put an app on my Home Screen?</h3>
+    <p>See <a href={href('install/')}>How to install</a>.</p>
+    <h3>Will it work without internet?</h3>
+    <p>Yes. Once an app has opened once, it works offline, and it syncs when you are back online.</p>
+    <h3>I cleared my browser and my information is gone.</h3>
+    <p>Apps with no account keep your information on your device only, so clearing the browser's site data removes it. Installing the app to your Home Screen helps protect it. If you used an account (Simple Kennel and Coach Board), sign back in and it syncs back down.</p>
+    <h3>An app shows an old version.</h3>
+    <p>Close it completely and open it again, and tap the "Update" prompt when it appears.</p>
+  </section>
+</Base>

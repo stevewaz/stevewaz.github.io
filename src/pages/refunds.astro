@@ -1,0 +1,19 @@
+---
+import Base from '../layouts/Base.astro';
+import Draft from '../components/Draft.astro';
+import { site, href } from '../config';
+---
+<Base title="Refunds and cancellation" description="How cancelling and refunds work.">
+  <section class="wrap section narrow prose">
+    <h1>Refunds and cancellation</h1>
+    <Draft />
+    <p><b>Right now our apps are free during early access, so there is nothing to refund.</b> When paid plans start, this is how we plan for them to work:</p>
+    <ul>
+      <li><b>Cancel any time.</b> You keep access until the end of the period you have paid for, and you are not charged again.</li>
+      <li><b>Free trial.</b> You will not be charged during a free trial, and we will remind you before it ends.</li>
+      <li><b>If it is not for you.</b> If you are not happy within the first 14 days of a paid plan, email us and we will refund it.</li>
+      <li><b>Your data.</b> You can export your information before you cancel.</li>
+    </ul>
+    <p>Questions: <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.</p>
+  </section>
+</Base>

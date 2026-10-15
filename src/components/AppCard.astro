@@ -1,0 +1,14 @@
+---
+import { href } from '../config';
+import type { App } from '../config';
+const { app } = Astro.props as { app: App };
+---
+<a class="card app-card" href={href(app.slug + '/')} style={`--accent:${app.accent}`}>
+  <img class="icon" src={href(app.icon)} alt="" width="64" height="64" loading="lazy" />
+  <div>
+    <h3>{app.name}</h3>
+    <p class="audience">{app.audience}</p>
+    <p>{app.short}</p>
+    <span class="pill">{app.status}</span>
+  </div>
+</a>

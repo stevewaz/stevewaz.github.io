@@ -1,0 +1,36 @@
+# Builds the Astro site and publishes it to GitHub Pages on every push to main.
+# One-time set-up: repo Settings > Pages > Source = "GitHub Actions".
+# For a custom domain, add it in Settings > Pages and set SITE_URL below (and remove SITE_BASE if you set one).
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: withastro/action@v3
+        env:
+          SITE_URL: https://stevewaz.github.io
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

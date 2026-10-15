@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import { href } from '../config';
+---
+<Base title="Page not found">
+  <section class="wrap section narrow center">
+    <h1>That page is not here.</h1>
+    <p class="lead">It may have moved. Try the home page.</p>
+    <a class="btn primary" href={href()}>Go home</a>
+  </section>
+</Base>

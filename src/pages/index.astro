@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+import AppCard from '../components/AppCard.astro';
+import { site, apps, href } from '../config';
+---
+<Base>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Web apps that install like apps</p>
+      <h1>Simple apps for the way you actually work, play and cook.</h1>
+      <p class="lead">No app store, no download wait. Open a link, add it to your Home Screen, and it works like any other app, even when the internet drops.</p>
+      <div class="cta">
+        <a class="btn primary" href="#apps">See the apps</a>
+        <a class="btn" href={href('install/')}>How to install</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="apps" class="wrap section">
+    <h2>The apps</h2>
+    <div class="grid apps">
+      {apps.map((a) => <AppCard app={a} />)}
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap section">
+      <h2>Why web apps?</h2>
+      <div class="grid three">
+        <div><h3>Nothing to download</h3><p>Open the link and you are in. Updates arrive on their own, so everyone is always on the latest version.</p></div>
+        <div><h3>Works offline</h3><p>Your information is saved on your device first, so a weak signal never stops you. It syncs when you are back online.</p></div>
+        <div><h3>On any device</h3><p>The same app on your phone, tablet and computer, with no separate versions to buy or keep up to date.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section narrow center">
+    <h2>Questions or ideas?</h2>
+    <p class="lead">We are a small team building these with the people who use them. Tell us what would make them better.</p>
+    <a class="btn primary" href={href('support/')}>Get in touch</a>
+  </section>
+</Base>

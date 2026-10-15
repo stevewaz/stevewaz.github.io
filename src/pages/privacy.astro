@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro';
+import Draft from '../components/Draft.astro';
+import { site, href } from '../config';
+---
+<Base title="Privacy" description="What our apps store, where, and who can see it.">
+  <section class="wrap section narrow prose">
+    <h1>Privacy</h1>
+    <Draft />
+    <p>We want to keep this plain. Here is what each app stores and where it goes. We do not sell your personal information, and we do not show ads.</p>
+
+    <h2>Simple Kennel and Coach Board</h2>
+    <ul>
+      <li>You sign in with an email address and a password. We store your email, your name and a protected form of your password.</li>
+      <li>What you enter (for Simple Kennel: customers, pets, vet documents, bookings and invoices; for Coach Board: your team, roster, schedule, plays and chat) is saved on your device and on our server so that it can sync between your devices and the rest of your kennel or team.</li>
+      <li>Other people in your kennel or team can see that information. People outside it cannot.</li>
+    </ul>
+
+    <h2>Heirloom and Family Game Night</h2>
+    <ul>
+      <li>By default what you enter stays on your own device, in your browser's or the app's storage. We do not receive it.</li>
+      <li>Family Game Night fetches trivia questions from a public trivia service (Open Trivia DB), which can see your device's internet address, like any website you visit. Heirloom loads its recipe-scanning tool from a public content network the first time you scan, and can fetch a web page when you ask it to import a recipe from one.</li>
+      <li>When family sharing is switched on in these apps, the information you choose to share is stored on our server and shown to the family you share it with.</li>
+    </ul>
+
+    <h2>This website and the apps' hosting</h2>
+    <ul>
+      <li>The web pages and apps are hosted on GitHub Pages. Like any host, it keeps technical logs, such as internet addresses and the pages requested.</li>
+      <li>At the time of writing we do not use advertising or analytics trackers. If that changes, we will say so here.</li>
+    </ul>
+
+    <h2>Payments</h2>
+    <p>If we offer paid plans, payments will be handled by a payment provider such as Stripe. They collect your payment details, and we do not store your card number.</p>
+
+    <h2>Your choices</h2>
+    <ul>
+      <li>You can ask us to delete your account and the information on our server by emailing <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.</li>
+      <li>You can remove what an app keeps on your device by clearing its site data in your browser, or deleting the app.</li>
+    </ul>
+
+    <h2>Children</h2>
+    <p>Family Game Night is made for families to play together. We do not knowingly collect personal information from children, and the solo games keep what they need on the device.</p>
+
+    <h2>Changes and contact</h2>
+    <p>If we change how we handle information, we will update this page. Questions: <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.</p>
+  </section>
+</Base>

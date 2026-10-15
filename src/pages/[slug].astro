@@ -1,0 +1,54 @@
+---
+import Base from '../layouts/Base.astro';
+import { apps, href, site } from '../config';
+export function getStaticPaths() {
+  return apps.map((app) => ({ params: { slug: app.slug }, props: { app } }));
+}
+const { app } = Astro.props;
+---
+<Base title={app.name} description={app.short}>
+  <section class="hero app-hero" style={`--accent:${app.accent}`}>
+    <div class="wrap">
+      <img class="big-icon" src={href(app.icon)} alt={`${app.name} icon`} width="96" height="96" />
+      <p class="eyebrow">{app.audience} · {app.status}</p>
+      <h1>{app.headline}</h1>
+      <p class="lead">{app.intro}</p>
+      <div class="cta">
+        <a class="btn primary" href={app.appUrl}>Open {app.name}</a>
+        <a class="btn" href={href('install/')}>How to install</a>
+      </div>
+      <ul class="ticks">{app.good.map((g) => <li>{g}</li>)}</ul>
+    </div>
+  </section>
+
+  <section class="wrap section" style={`--accent:${app.accent}`}>
+    <h2>What you can do</h2>
+    <div class="grid features">
+      {app.features.map((f) => <div class="card feature"><h3>{f.title}</h3><p>{f.text}</p></div>)}
+    </div>
+  </section>
+
+  <section class="band" style={`--accent:${app.accent}`}>
+    <div class="wrap section narrow">
+      <h2>{app.pricing.title}</h2>
+      <p class="lead">{app.pricing.text}</p>
+      {app.notYet && <p class="note">{app.notYet}</p>}
+      <div class="cta">
+        <a class="btn primary" href={app.appUrl}>Try {app.name}</a>
+        <a class="btn" href={href('support/')}>Ask a question</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section narrow">
+    <h2>Other apps</h2>
+    <div class="grid apps">
+      {apps.filter((a) => a.slug !== app.slug).map((a) => (
+        <a class="card app-card" href={href(a.slug + '/')} style={`--accent:${a.accent}`}>
+          <img class="icon" src={href(a.icon)} alt="" width="48" height="48" loading="lazy" />
+          <div><h3>{a.name}</h3><p>{a.short}</p></div>
+        </a>
+      ))}
+    </div>
+  </section>
+</Base>
