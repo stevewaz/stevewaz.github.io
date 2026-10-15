@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephen Wasielewski - Resume</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* A light, soft gray for the background */
+        }
+        .text-primary {
+            color: #1a237e; /* A deep indigo as the primary color */
+        }
+        .bg-primary-container {
+            background-color: #e8eaf6; /* A lighter shade of the primary color */
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <main class="max-w-4xl mx-auto rounded-3xl shadow-2xl overflow-hidden bg-white">
+        
+        <!-- Header Section with M3-inspired color and shadow -->
+        <header class="bg-primary-container text-primary p-6 md:p-8 rounded-t-3xl">
+            <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Stephen Wasielewski</h1>
+            <p class="text-base md:text-lg mt-1 font-medium">Software Engineer/Architect</p>
+            <div class="mt-4 text-xs md:text-sm flex flex-wrap gap-x-4 font-semibold">
+                <span>1827 Eastlawn Dr H6, Midland, MI 48642</span>
+                <span class="hidden md:inline">|</span>
+                <span><a href="mailto:stevewasielewski@gmail.com" class="hover:underline">stevewasielewski@gmail.com</a></span>
+                <span class="hidden md:inline">|</span>
+                <span>803-307-9312</span>
+            </div>
+        </header>
+
+        <div class="p-6 md:p-8">
+            
+            <!-- Professional Summary -->
+            <section class="pb-6 border-b border-gray-200">
+                <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">Professional Summary</h2>
+                <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                    Seasoned Software Engineer/Architect with nearly 30 years of experience designing enterprise-grade applications across banking, logistics, and mobile ecosystems. Proven leadership in Blazor, .NET, and cross-platform development (Xamarin, MAUI), with a strong focus on code clarity, architectural modularity, and secure, scalable solutions. Adept at transforming legacy stacks, mentoring agile teams, and delivering domain-driven systems that simplify complexity and accelerate business impact.
+                </p>
+            </section>
+
+            <!-- Technical Skills -->
+            <section class="py-6 border-b border-gray-200">
+                <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">Technical Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm md:text-base">
+                    <div class="bg-gray-50 p-4 rounded-xl shadow-sm">
+                        <h3 class="font-bold text-primary">Languages:</h3>
+                        <p class="text-gray-700">C#, Java, VB.NET, SQL, HTML, CSS, JavaScript, JSON, XML</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-xl shadow-sm">
+                        <h3 class="font-bold text-primary">Frameworks:</h3>
+                        <p class="text-gray-700">Blazor Server/WASM, ASP.NET Core, MVC, Minimal APIs, RESTful Services</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-xl shadow-sm">
+                        <h3 class="font-bold text-primary">Mobile Dev:</h3>
+                        <p class="text-gray-700">Xamarin.Forms, MAUI Blazor, and MAUI</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-xl shadow-sm">
+                        <h3 class="font-bold text-primary">Frontend:</h3>
+                        <p class="text-gray-700">MudBlazor, Bootstrap, jQuery, AJAX, WPF, and Xaml</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-xl shadow-sm">
+                        <h3 class="font-bold text-primary">Databases:</h3>
+                        <p class="text-gray-700">SQL Server, Oracle, MySQL, SQLite, MongoDB, LiteDB, and Entity Framework Core</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-xl shadow-sm">
+                        <h3 class="font-bold text-primary">Design Patterns:</h3>
+                        <p class="text-gray-700">Domain-Driven Design, Microservices, Middleware, Event-Driven Architecture</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-xl shadow-sm">
+                        <h3 class="font-bold text-primary">Cloud & DevOps:</h3>
+                        <p class="text-gray-700">IIS, Azure DevOps, Microsoft App Center</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-xl shadow-sm">
+                        <h3 class="font-bold text-primary">Tools:</h3>
+                        <p class="text-gray-700">Git, Visual Studio, Postman, Jira, Agile/Scrum methodologies</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Professional Experience -->
+            <section class="py-6">
+                <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">Professional Experience</h2>
+                
+                <!-- Experience Item -->
+                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">Software Engineer | Lake Michigan Credit Union</h3>
+                        <span class="text-sm text-gray-500">September 2021 - Present</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Grand Rapids, MI (Remote)</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Led architecture and development of the omnichannel onboarding platform, streamlining account creation, loan processing, and member services into a unified Blazor Server experience.</li>
+                        <li>Spearheaded a shift toward domain-driven design and microservices, creating modular APIs that abstract core banking logic and improve maintainability.</li>
+                        <li>Piloted modernization of legacy internal applications to Blazor Server/WASM stack—promoting code reuse, UI consistency, and long-term sustainability.</li>
+                        <li>Collaborated across teams to align software evolution with operational strategy; handled production support within on-call rotations.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience Item -->
+                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">Sr Software Engineer/Team Lead | eoStar</h3>
+                        <span class="text-sm text-gray-500">June 2020 - September 2021</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Holland, MI</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Architected a forecasting web application using Blazor WASM, replacing legacy WPF tooling to enable better prediction analytics and business agility.</li>
+                        <li>Designed middleware services to decouple business logic from legacy layers, supporting modular upgrades across forecasting and logistics systems.</li>
+                        <li>Oversaw daily scrums and cross-functional collaboration, mentoring engineers and resolving blockers across the maintenance lifecycle.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item -->
+                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">Software Developer | Direct-Connex</h3>
+                        <span class="text-sm text-gray-500">March 2019 - April 2020</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Grand Rapids, MI</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Initiated migration of warehouse software from WinForms to Blazor, rearchitecting UI workflows while preserving functional parity.</li>
+                        <li>Delivered a modular Sales Order Entry System built with Blazor and Bootstrap, enabling scalable customization across clients and products.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item -->
+                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">Xamarin Developer | Excellerent (Security Finance)</h3>
+                        <span class="text-sm text-gray-500">October 2018 - March 2019</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Greenville, SC</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Architected and developed a secure mobile loan signing platform using Xamarin.Forms and DocuSign integration, streamlining customer onboarding and document workflows.</li>
+                        <li>Integrated Azure DevOps pipelines and Microsoft App Center for automated builds, distribution, and telemetry.</li>
+                        <li>Collaborated within an Agile team to align user needs with compliance and platform constraints.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item -->
+                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">Xamarin Developer | Sc Consulting (SRS Distribution)</h3>
+                        <span class="text-sm text-gray-500">July 2018 - October 2018</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Greenville, SC</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Delivered production-grade mobile solutions for roofing distribution logistics, architected with Xamarin.Forms for cross-platform parity.</li>
+                        <li>Created reusable controls for localization-aware image rendering, page banners, and splash-screen video playback—all modular for plug-and-play usage across app pages.</li>
+                        <li>Drove pixel-perfect UI fidelity across Android/iOS while ensuring lean runtime performance.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item -->
+                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">Sr. Software Developer | The Gordian Group</h3>
+                        <span class="text-sm text-gray-500">April 2014 - May 2018</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Greenville, SC</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Led architecture of a data collection platform for field engineers, integrating identity management and mobile APIs via Xamarin.Forms.</li>
+                        <li>Built a middleware pipeline between NNSA Builder and RsMeans Cost Engine, delivering dynamic cost estimation and secure system integration for the U.S. government.</li>
+                        <li>Modernized legacy web services and database layers, replacing VB.NET and ASP.NET stacks with modular Web API endpoints.</li>
+                        <li>Supported and enhanced multi-product portfolio—blending legacy maintenance and forward-looking API enablement.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item -->
+                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">Software Engineer | ACI Worldwide Company</h3>
+                        <span class="text-sm text-gray-500">December 2012 - April 2014</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Chapin, SC</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Modernized legacy loan web platform by redesigning authentication flows and implementing secure single-sign-on integrations using ASP.NET and C#.</li>
+                        <li>Provided architectural support for legacy banking systems (Classic ASP, SQL Server), ensuring reliable operations while introducing clean abstractions and modular upgrade paths.</li>
+                        <li>Engineered secure interfaces for third-party vendors, bridging home banking systems with external partners via LINQ and custom SSO protocols.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item -->
+                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">Sr. Software Developer | The Benefit Company</h3>
+                        <span class="text-sm text-gray-500">June 2012 - December 2012</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Columbia, SC</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Transitioned benefit management system from Classic ASP to ASP.NET MVC, using Entity Framework and modular design principles for data integrity and testability. Built responsive web experiences using jQuery and C#, enhancing user accessibility while aligning with HIPAA and security protocols.</li>
+                        <li>Maintained and extended legacy systems while architecting forward-looking replacements ensuring zero downtime and smooth migration.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item -->
+                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">Software Developer | Hawley, LLC</h3>
+                        <span class="text-sm text-gray-500">September 2011 - June 2012</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Lexington, SC</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Designed and deployed quality control applications for packing stations, architected on Windows 7 tablets using C# and SQL Server 2008.</li>
+                        <li>Engineered WMS (Warehouse Management System) add-ons for order picking, integrating Windows CE/7 with handheld devices and persistent backend logic.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item -->
+                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">Sr. Programmer | South Carolina State Federal Credit Union</h3>
+                        <span class="text-sm text-gray-500">March 2007 - September 2011</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Columbia, SC</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Served as technical lead for SCU's online banking transformation via Q2, delivering secure, scalable customer experiences.</li>
+                        <li>Engineered add-ons for online banking using SDKs, extending platform capabilities without compromising core integrity.</li>
+                        <li>Designed critical batch programs and RED Flag compliance tools in VB.NET/Oracle, enhancing automation and fraud detection.</li>
+                        <li>Developed modular loan deferment and deposit-import programs with socket-level data ingestion and cross-database interoperability.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item -->
+                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">Sr. Developer | Stevens Aviation</h3>
+                        <span class="text-sm text-gray-500">March 2005 - March 2007</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Greenville, SC</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Designed and launched an in-house CRM platform using ASP.NET/C# and SQL Server Express, driving pipeline visibility and predictive sales tracking.</li>
+                        <li>Architected a custom scheduling engine for aircraft arrivals/departures and service mapping, syncing operational logistics with hangar workflows.</li>
+                        <li>Led front-end and back-end development of new internet presence, reinforcing brand identity and customer engagement.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item -->
+                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">Sr. Developer | EBridge</h3>
+                        <span class="text-sm text-gray-500">June 2004 - March 2005</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Greenville, SC</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Modernized quality analysis systems and developed custom time-reporting tools using ASP.NET/VB.NET and MySQL, integrating Lotus Notes for seamless workflow adoption.</li>
+                        <li>Created a web-based time import module for staffing platforms, streamlining data input across web and desktop clients.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item -->
+                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">Sr. Developer | Hayssen</h3>
+                        <span class="text-sm text-gray-500">August 2003 - June 2004</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Duncan, SC</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Maintained and extended SalesLogix CRM, improving system interoperability across sales and management teams.</li>
+                        <li>Designed a data sync engine between AS-400 and SQL Server, ensuring real-time consistency across platforms.</li>
+                        <li>Created executive-facing reporting tools via ASP.NET and SQL Server, empowering sales strategy with live analytics.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item -->
+                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">Sr. Developer | Xtend Corporation</h3>
+                        <span class="text-sm text-gray-500">November 2002 - August 2003</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Columbia, SC</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Developed modular LMS components with ASP.NET/C#, enhancing learning delivery for enterprise clients. Owned full-stack development responsibilities, from database design to UI optimization.</li>
+                        <li>Managed product evolution from Classic ASP to .NET, implementing clean migration paths and architectural reuse.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item -->
+                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">Sr. Developer | Solutions Plus+</h3>
+                        <span class="text-sm text-gray-500">May 2001 - November 2002</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Simpsonville, SC</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Built a project tracking system using WinForms (VB.NET/C#) and SQL Server to enable lifecycle transparency and cost control.</li>
+                        <li>Led development of a web-based invoice automation platform, cutting client processing time by 50%.</li>
+                        <li>Delivered reporting dashboards for Verizon with ASP and Crystal Reports, bridging financial oversight with digital access.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item -->
+                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">ASP Developer | Innova Communications</h3>
+                        <span class="text-sm text-gray-500">April 2001 - May 2001</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Clemson, SC (contract)</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Engineered an inventory/POS system using Classic ASP, Crystal Reports, and SQL Server, facilitating order tracking and cost optimization.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item -->
+                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">Developer | Metaprise</h3>
+                        <span class="text-sm text-gray-500">December 2000 - February 2001</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Greenville, SC</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Customized Maximizer CRM in Lotus Notes for enterprise-grade security and client operations.</li>
+                        <li>Led Domino web development for regional security firms, aligning web UX with backend logic.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item -->
+                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">Programmer | NewSouth</h3>
+                        <span class="text-sm text-gray-500">March 2000 - December 2000</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Greenville, SC</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Orchestrated middleware layers with ObjectSwitch, enabling seamless data movement between legacy billing systems and modern interfaces.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item -->
+                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">Lotus Notes Developer | Norstan</h3>
+                        <span class="text-sm text-gray-500">February 1999 - February 2000</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Columbia, SC</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Delivered multiple Lotus Notes solutions: Complaint Tracker, Quote Builder, Order Entry, and Purchase Approval workflows.</li>
+                        <li>Designed and implemented role-based workflows across field sales, operations, and procurement.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item -->
+                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">Smalltalk Developer | PMSC</h3>
+                        <span class="text-sm text-gray-500">August 1996 - February 1999</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Columbia, SC</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Managed and modified VisualAge Smalltalk code on the workstation and managed the Smalltalk Code in the Smalltalk library for the Client Services Group.</li>
+                        <li>Worked closely with management to help assign the tasks and reviewed GUI specs for the Workstation team.</li>
+                        <li>Developed a knowledge management solution for the client service group with Active Server Pages, Outlook 98 and MS Access.</li>
+                        <li>Developed and supported the worldwide release of a major P&C application using VisualAge for Smalltalk and various other tools.</li>
+                        <li>Member of the architect group that developed the methodology for the first release of the PMSC's product S3+. This product was used by major insurance companies in the business.</li>
+                    </ul>
+                </div>
+                
+            </section>
+            
+            <!-- Education -->
+            <section class="pt-6">
+                <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">Education</h2>
+                <div class="p-4 rounded-xl shadow-sm bg-gray-50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
+                        <h3 class="text-lg font-bold text-primary">Bachelors of Science Degree, Computer Information Systems</h3>
+                        <span class="text-sm text-gray-500">August 1996</span>
+                    </div>
+                    <p class="text-sm text-gray-600">Limestone College, Columbia, SC</p>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+
+</body>
+</html>
