@@ -23,6 +23,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: withastro/action@v3
+        with:
+          node-version: 24   # Astro 7 needs Node 22.22 or newer; the action defaults to 20
         env:
           SITE_URL: https://stevewaz.github.io
   deploy:
