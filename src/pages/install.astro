@@ -19,6 +19,10 @@ import { apps, href } from '../config';
     </ul>
     <p class="muted">Prefer not to install? You can use any of the apps in your browser as a normal website. Installing just makes it quicker to open and safer for your information.</p>
 
+    <p id="detected" class="note" hidden></p>
+
+    <div class="platforms">
+    <div class="platform" id="iphone" data-platform="iphone">
     <h2>On an iPhone or iPad</h2>
     <ol class="steps">
       <li>Open the app's link in <b>Safari</b>.</li>
@@ -26,19 +30,25 @@ import { apps, href } from '../config';
       <li>Choose <b>Add to Home Screen</b>, then tap <b>Add</b>.</li>
     </ol>
     <p class="muted">On iPhone and iPad, only Safari can add an app to the Home Screen. Other browsers can use the app but not install it.</p>
+    </div>
 
+    <div class="platform" id="android" data-platform="android">
     <h2>On an Android phone or tablet</h2>
     <ol class="steps">
       <li>Open the app's link in <b>Chrome</b>.</li>
       <li>Tap the <b>⋮ menu</b>, then <b>Install app</b> (or <b>Add to Home screen</b>).</li>
       <li>Confirm. The app appears with your others.</li>
     </ol>
+    </div>
 
+    <div class="platform" id="computer" data-platform="computer">
     <h2>On a computer</h2>
     <ol class="steps">
       <li>Open the app's link in <b>Chrome</b> or <b>Edge</b>.</li>
       <li>Click the <b>install</b> icon at the right of the address bar, or open the browser menu and choose <b>Install</b>.</li>
     </ol>
+    </div>
+    </div>
 
     <h2>Good to know</h2>
     <ul class="bullets">
@@ -51,3 +61,22 @@ import { apps, href } from '../config';
     <ul class="bullets">{apps.map((a) => <li><a href={a.appUrl}>{a.name}</a> · <a href={href(a.slug + '/')}>about it</a></li>)}</ul>
   </section>
 </Base>
+
+<script>
+  // Put the steps for the visitor's own device first. Without JavaScript all three stay in their usual order.
+  const ua = navigator.userAgent;
+  const iOS = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  const platform = iOS ? 'iphone' : /Android/.test(ua) ? 'android' : 'computer';
+  const names: Record<string, string> = { iphone: 'an iPhone or iPad', android: 'an Android device', computer: 'a computer' };
+  const mine = document.getElementById(platform);
+  const list = mine?.parentElement;
+  const note = document.getElementById('detected');
+  if (mine && list && note) {
+    list.prepend(mine);
+    mine.classList.add('mine');
+    const otherBrowser = iOS && /CriOS|FxiOS|EdgiOS|OPiOS/.test(ua);
+    note.textContent = `It looks like you are on ${names[platform]}, so those steps come first.` +
+      (otherBrowser ? ' You are not in Safari: open this page in Safari to add an app to your Home Screen.' : '');
+    note.hidden = false;
+  }
+</script>

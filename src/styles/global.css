@@ -67,6 +67,8 @@ nav a:hover { color: var(--ink); }
 .band { background: var(--band); border-block: 1px solid var(--border); }
 .note { padding: 12px 16px; border-radius: 12px; background: color-mix(in srgb, var(--accent) 10%, transparent); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); }
 
+.platform.mine { background: var(--card); border: 1.5px solid var(--brand); border-radius: var(--radius); padding: 4px 22px 14px; margin: 24px 0; }
+.platform.mine h2 { margin-top: .8em; }
 .steps, .bullets { padding-left: 1.3em; }
 .steps li, .bullets li { margin-bottom: .5em; }
 .prose h2 { font-size: 1.3rem; margin-top: 1.8em; }
