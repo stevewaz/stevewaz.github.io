@@ -28,6 +28,12 @@ const { app } = Astro.props;
     </div>
   </section>
 
+  <section class="wrap section narrow" style={`--accent:${app.accent}`}>
+    <h2>Installs like an app, no store needed</h2>
+    <p>{app.name} is a progressive web app (PWA). Open it in your browser, add it to your Home Screen or desktop, and it gets its own icon and opens like any other app. It updates itself and keeps working when the internet drops.</p>
+    <p><a href={href('install/')}>How to install {app.name}</a></p>
+  </section>
+
   <section class="band" style={`--accent:${app.accent}`}>
     <div class="wrap section narrow">
       <h2>{app.pricing.title}</h2>

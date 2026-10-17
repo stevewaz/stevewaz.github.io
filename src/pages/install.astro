@@ -2,10 +2,22 @@
 import Base from '../layouts/Base.astro';
 import { apps, href } from '../config';
 ---
-<Base title="Install an app" description="How to add a web app to your Home Screen, with no app store.">
+<Base title="Install an app" description="How to install our progressive web apps (PWAs) on your Home Screen or desktop, with no app store.">
   <section class="wrap section narrow">
     <h1>Install an app</h1>
     <p class="lead">These apps open in your browser, and you can add each one to your device so it looks and works like any other app. There is no app store and nothing to download.</p>
+
+    <h2>What is a PWA?</h2>
+    <p>Our apps are <b>progressive web apps</b>, or <b>PWAs</b>. A PWA is a website built to behave like an app: you open it once in your browser, choose "install" or "Add to Home Screen", and it gets its own icon and opens like any other app on your device.</p>
+    <p>Compared with an app from a store:</p>
+    <ul class="bullets">
+      <li><b>No store, no download:</b> the link is the install. Share it with a teammate or a family member and they can be using it in a minute.</li>
+      <li><b>Always current:</b> the app updates itself, so you never have to chase a new version.</li>
+      <li><b>Works offline:</b> after the first visit, the app keeps working without a connection.</li>
+      <li><b>Easy to remove:</b> take it off your Home Screen or desktop like any other app.</li>
+      <li><b>One app for everything:</b> the same app on iPhone, iPad, Android and computers.</li>
+    </ul>
+    <p class="muted">Prefer not to install? You can use any of the apps in your browser as a normal website. Installing just makes it quicker to open and safer for your information.</p>
 
     <h2>On an iPhone or iPad</h2>
     <ol class="steps">
@@ -31,7 +43,7 @@ import { apps, href } from '../config';
     <h2>Good to know</h2>
     <ul class="bullets">
       <li><b>Updates:</b> the app updates itself. When a new version is ready you will see a small "Update" prompt.</li>
-      <li><b>Offline:</b> once it has opened once, it works without a connection. What you enter is saved on your device and syncs when you are back online.</li>
+      <li><b>Offline:</b> open the app once while you are online so it can set itself up for offline use. After that it works without a connection. What you enter is saved on your device and syncs when you are back online.</li>
       <li><b>Your information:</b> on a device with no account, what you enter stays on that device. Clearing your browser's site data would remove it, so installing the app to your Home Screen is the safest way to keep it.</li>
     </ul>
 

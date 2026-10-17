@@ -6,9 +6,9 @@ import { site, apps, href } from '../config';
 <Base>
   <section class="hero">
     <div class="wrap">
-      <p class="eyebrow">Web apps that install like apps</p>
+      <p class="eyebrow">Progressive web apps (PWAs)</p>
       <h1>Simple apps for the way you actually work, play and cook.</h1>
-      <p class="lead">No app store, no download wait. Open a link, add it to your Home Screen, and it works like any other app, even when the internet drops.</p>
+      <p class="lead">No app store, no download wait. Our apps are progressive web apps (PWAs): open a link, add it to your Home Screen, and it works like any other app, even when the internet drops.</p>
       <div class="cta">
         <a class="btn primary" href="#apps">See the apps</a>
         <a class="btn" href={href('install/')}>How to install</a>
@@ -25,11 +25,15 @@ import { site, apps, href } from '../config';
 
   <section class="band">
     <div class="wrap section">
-      <h2>Why web apps?</h2>
-      <div class="grid three">
-        <div><h3>Nothing to download</h3><p>Open the link and you are in. Updates arrive on their own, so everyone is always on the latest version.</p></div>
+      <h2>What is a PWA?</h2>
+      <p class="lead narrow-lead">A progressive web app is a website that can be installed. You open it once in your browser, add it to your device, and from then on it has its own icon and opens like any other app. You get the app experience without a trip to the app store.</p>
+      <div class="grid three six">
+        <div><h3>Nothing to download</h3><p>Open the link and you are in. There is no store listing to find and no large download to wait for.</p></div>
+        <div><h3>Installs like an app</h3><p>Add it to your Home Screen or desktop and it gets its own icon and opens on its own, ready whenever you are. <a href={href('install/')}>See how</a>.</p></div>
         <div><h3>Works offline</h3><p>Your information is saved on your device first, so a weak signal never stops you. It syncs when you are back online.</p></div>
+        <div><h3>Always up to date</h3><p>Updates arrive on their own, so everyone is on the latest version and nobody has to hunt for an update.</p></div>
         <div><h3>On any device</h3><p>The same app on your phone, tablet and computer, with no separate versions to buy or keep up to date.</p></div>
+        <div><h3>Easy to remove</h3><p>If you ever want it gone, remove it from your Home Screen or desktop like any other app.</p></div>
       </div>
     </div>
   </section>
