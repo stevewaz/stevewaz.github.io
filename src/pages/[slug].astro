@@ -14,8 +14,8 @@ const { app } = Astro.props;
       <h1>{app.headline}</h1>
       <p class="lead">{app.intro}</p>
       <div class="cta">
-        <a class="btn primary" href={app.appUrl}>Open {app.name}</a>
-        <a class="btn" href={href('install/')}>How to install</a>
+        <a class="btn primary" href={href(app.slug + '/get/')}>Get {app.name}</a>
+        <a class="btn" href={app.appUrl}>Open it in your browser</a>
       </div>
       <ul class="ticks">{app.good.map((g) => <li>{g}</li>)}</ul>
     </div>
@@ -36,12 +36,15 @@ const { app } = Astro.props;
 
   <section class="band" style={`--accent:${app.accent}`}>
     <div class="wrap section narrow">
-      <h2>{app.pricing.title}</h2>
-      <p class="lead">{app.pricing.text}</p>
-      {app.notYet && <p class="note">{app.notYet}</p>}
-      <div class="cta">
-        <a class="btn primary" href={app.appUrl}>Try {app.name}</a>
-        <a class="btn" href={href('support/')}>Ask a question</a>
+      <div class="card getcard">
+        <span class="pill big">{app.pricing.title}</span>
+        <p class="price"><strong>Free</strong><span class="muted">for now · no card needed</span></p>
+        <p>{app.pricing.text}</p>
+        {app.notYet && <p class="note">{app.notYet}</p>}
+        <div class="cta">
+          <a class="btn primary" href={href(app.slug + '/get/')}>Get {app.name}</a>
+          <a class="btn" href={href('support/')}>Ask a question</a>
+        </div>
       </div>
     </div>
   </section>

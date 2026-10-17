@@ -64,6 +64,18 @@ nav a:hover { color: var(--ink); }
 .app-card p { color: var(--muted); font-size: .95rem; }
 .pill { display: inline-block; font-size: .78rem; font-weight: 650; padding: 3px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent); }
 .feature { border-top: 3px solid var(--accent); }
+.pill.big { font-size: .85rem; padding: 4px 12px; }
+.price { display: flex; align-items: baseline; gap: 10px; margin: .5em 0 .4em; }
+.price strong { font-size: 2.6rem; line-height: 1.1; }
+.getcard { padding: 26px; box-shadow: var(--shadow); }
+.getcard .cta { margin-bottom: 0; }
+.get-steps { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 14px; }
+.get-step { display: flex; gap: 16px; align-items: flex-start; }
+.get-step .num { flex: none; width: 34px; height: 34px; border-radius: 999px; background: var(--accent); color: #fff; font-weight: 700; display: grid; place-items: center; }
+.get-step h2 { margin: 0 0 .3em; font-size: 1.2rem; }
+.get-step .steps { margin: .4em 0 .8em; }
+.home-preview { display: flex; align-items: center; gap: 14px; margin-top: 18px; padding: 14px 18px; border-radius: 14px; background: var(--band); }
+.home-preview img { width: 56px; height: 56px; border-radius: 14px; box-shadow: var(--shadow); }
 .band { background: var(--band); border-block: 1px solid var(--border); }
 .note { padding: 12px 16px; border-radius: 12px; background: color-mix(in srgb, var(--accent) 10%, transparent); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); }
 

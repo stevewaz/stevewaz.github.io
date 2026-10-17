@@ -27,6 +27,8 @@ export interface App {
   pricing: { title: string; text: string };
   /** Honest notes about what isn't ready yet. */
   notYet?: string;
+  /** Set when the app asks people to sign up: what the first sign-up looks like. */
+  account?: string;
 }
 
 export const apps: App[] = [
@@ -52,8 +54,9 @@ export const apps: App[] = [
       { title: 'Works offline', text: 'Everything is saved on the device first and syncs when it can, so a bad connection never stops you.' },
     ],
     good: ['Install it on any device with no app store', 'Syncs between your staff\'s devices', 'Your data stays yours: export it any time'],
-    pricing: { title: 'Free trial, simple pricing', text: 'Free while we are in early access. A simple monthly price for your whole team will be announced before launch, and you will get plenty of notice.' },
+    pricing: { title: 'Free for now', text: 'Free while we are in early access, for your whole team. A simple monthly price will be announced before launch, and you will get plenty of notice.' },
     notYet: 'Early access: we are working with our first kennels. Tell us what you need.',
+    account: 'Simple Kennel uses an account so your whole team shares one schedule. The owner signs up first, then invites staff by email.',
   },
   {
     slug: 'coach-board',
@@ -77,7 +80,8 @@ export const apps: App[] = [
       { title: 'Eight sports', text: 'Girls\' and boys\' lacrosse, basketball, volleyball, field hockey, ice hockey, soccer, football and flag football.' },
     ],
     good: ['Install it on any device with no app store', 'Everyone on the team stays in step', 'Works offline'],
-    pricing: { title: 'Free while in early access', text: 'Coaches will be able to try it free. Pricing for teams will be announced before launch.' },
+    pricing: { title: 'Free for now', text: 'Free for coaches while we are in early access. Pricing for teams will be announced before launch.' },
+    account: 'The coach signs up and starts the team. Players join with a short code, so they do not need an account.',
   },
   {
     slug: 'heirloom',

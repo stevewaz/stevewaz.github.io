@@ -1,0 +1,59 @@
+---
+import Base from '../../layouts/Base.astro';
+import { apps, href } from '../../config';
+export function getStaticPaths() {
+  return apps.map((app) => ({ params: { slug: app.slug }, props: { app } }));
+}
+const { app } = Astro.props;
+let n = 0;
+const step = () => ++n;
+---
+<Base title={`Get ${app.name}`} description={`How to get ${app.name}: it is free for now, with no app store and no card.`}>
+  <section class="hero app-hero" style={`--accent:${app.accent}`}>
+    <div class="wrap narrow">
+      <img class="big-icon" src={href(app.icon)} alt={`${app.name} icon`} width="96" height="96" />
+      <p class="eyebrow">Free for now · No card needed</p>
+      <h1>Get {app.name}</h1>
+      <p class="lead">No app store and nothing to download. {app.name} is a progressive web app (PWA): open it, then add it to your Home Screen so it opens like any other app.</p>
+    </div>
+  </section>
+
+  <section class="wrap section narrow" style={`--accent:${app.accent}`}>
+    <ol class="get-steps">
+      <li class="card get-step">
+        <span class="num">{step()}</span>
+        <div>
+          <h2>Open {app.name}</h2>
+          <p>It opens in your browser and works right away.</p>
+          <a class="btn primary" href={app.appUrl}>Open {app.name}</a>
+        </div>
+      </li>
+
+      {app.account && (
+        <li class="card get-step">
+          <span class="num">{step()}</span>
+          <div>
+            <h2>Create your account</h2>
+            <p>{app.account} There is nothing to pay.</p>
+          </div>
+        </li>
+      )}
+
+      <li class="card get-step">
+        <span class="num">{step()}</span>
+        <div>
+          <h2>Add it to your Home Screen</h2>
+          <p><b>iPhone or iPad:</b> open the app in Safari, tap <b>Share</b> (the square with an arrow), then <b>Add to Home Screen</b> and <b>Add</b>.</p>
+          <p><b>Android or a computer:</b> in Chrome or Edge, choose <b>Install app</b> from the menu or the address bar.</p>
+          <p class="muted">Open it once while you are online so it can set itself up for offline use. <a href={href('install/')}>Full install steps</a></p>
+          <div class="home-preview">
+            <img src={href(app.icon)} alt="" width="56" height="56" />
+            <span><b>{app.name}</b><br /><span class="muted">What you will see on your Home Screen</span></span>
+          </div>
+        </div>
+      </li>
+    </ol>
+
+    <p class="center" style="margin-top: 32px"><a href={href(app.slug + '/')}>Back to {app.name}</a> · <a href={href('support/')}>Need help?</a></p>
+  </section>
+</Base>
