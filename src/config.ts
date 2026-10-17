@@ -106,6 +106,7 @@ export const apps: App[] = [
     good: ['Install it on any device with no app store', 'Works with no internet', 'Warm and simple'],
     pricing: { title: 'Free on your device', text: 'Using Heirloom on your own device is free. Sharing a family kitchen between phones is coming.' },
     notYet: 'Coming soon: share your recipes with family so everyone has the same book on their phone.',
+    account: 'Sign up with your name and an email address. It is how you will share your recipe book with family once sharing arrives.',
   },
   {
     slug: 'family-game-night',
@@ -131,6 +132,7 @@ export const apps: App[] = [
     good: ['Install it on any device with no app store', 'Solo games work offline', 'Easy for kids and grandparents'],
     pricing: { title: 'Free to play solo', text: 'The solo games are free. Playing against the family, turn by turn, is coming.' },
     notYet: 'Coming soon: family matches, where everyone plays the same round whenever they are free.',
+    account: 'Sign up with your name and an email address. It is how you will play family matches once they arrive.',
   },
 ];
 
