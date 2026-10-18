@@ -3,7 +3,7 @@
 export const site = {
   /** A working name. Change it here and it changes everywhere. */
   name: 'Waz Apps',
-  tagline: 'Simple apps for the way you actually work, play and cook. Nothing to download from a store.',
+  tagline: 'Simple apps for the way you actually work, play, cook and fish. Nothing to download from a store.',
   /** TODO: replace with a real address before launch (it appears on the Support, Terms, Privacy and Refunds pages). */
   contactEmail: 'hello@example.com',
   /** Show a "draft" notice on the legal pages until they have been reviewed. */
@@ -133,6 +133,31 @@ export const apps: App[] = [
     pricing: { title: 'Free to play solo', text: 'The solo games are free. Playing against the family, turn by turn, is coming.' },
     notYet: 'Coming soon: family matches, where everyone plays the same round whenever they are free.',
     account: 'Sign up with your name and an email address. It is how you will play family matches once they arrive.',
+  },
+  {
+    slug: 'fishlog',
+    name: 'FishLog',
+    short: 'A fishing journal with a catch log, trips, insights and a map.',
+    audience: 'For anglers',
+    accent: '#12525A',
+    icon: 'img/fishlog.png',
+    appUrl: 'https://stevewaz.github.io/fishlog_blazor/',
+    status: 'Free on your device',
+    headline: 'Every catch, every trip, in one simple log.',
+    intro: 'Log your catches in seconds, group them into trips, and see what your fishing looks like over time. Works at the lake, even with no signal.',
+    features: [
+      { title: 'Log a catch', text: 'Pick or type the species, then add the length, weight, notes and the spot. One tap fills in where you are.' },
+      { title: 'Photos of your catch', text: 'Take a photo or choose one from your gallery, and keep it with the catch.' },
+      { title: 'Trips', text: 'Group your catches into a trip and see how many fish and species you landed, and the biggest one.' },
+      { title: 'Insights', text: 'Your longest and heaviest catches, your top species, the last twelve months, and catches by moon phase.' },
+      { title: 'Conditions and moon', text: 'Current air temperature and wind where you are, plus the moon phase and solunar windows. The moon times are folklore, not a forecast.' },
+      { title: 'A map for the water', text: 'Satellite and topo views with water layers, lake names, and boat ramps and fishing access. Download a region to use its map with no signal.' },
+      { title: 'Sync across your devices', text: 'Sign in and your catches and trips are backed up and shared between your phone and tablet. Full-size photos stay on the device that took them.' },
+      { title: 'Works offline, light and dark', text: 'Your log, trips and insights work with no connection. Weather and the online map layers need one.' },
+    ],
+    good: ['Install it on any device with no app store', 'Your log works with no signal', 'Back up and sync across your devices'],
+    pricing: { title: 'Free for now', text: 'FishLog is free to use while we are in early access. If pricing is introduced later, it will be announced well ahead of time.' },
+    account: 'A free account backs up your catches and trips and syncs them between your devices. Your log also works on this device without one.',
   },
 ];
 
