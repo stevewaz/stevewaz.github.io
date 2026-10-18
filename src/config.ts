@@ -4,8 +4,8 @@ export const site = {
   /** A working name. Change it here and it changes everywhere. */
   name: 'Waz Apps',
   tagline: 'Simple apps for the way you actually work, play, cook and fish. Nothing to download from a store.',
-  /** TODO: replace with a real address before launch (it appears on the Support, Terms, Privacy and Refunds pages). */
-  contactEmail: 'hello@example.com',
+  /** Where feedback and questions go (it appears on the Support, Terms, Privacy and Refunds pages). */
+  contactEmail: 'stevewasielewski@gmail.com',
   /** Show a "draft" notice on the legal pages until they have been reviewed. */
   legalReviewed: false,
 };

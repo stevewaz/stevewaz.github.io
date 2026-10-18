@@ -14,7 +14,7 @@ npm run build      # writes dist/
 | Setting | What it is |
 | --- | --- |
 | `site.name` | The brand name. It is a working name ("Waz Apps"); changing it changes the header, footer and page titles |
-| `site.contactEmail` | **Placeholder.** Put a real address here before launch. It appears on Support, Terms, Privacy and Refunds |
+| `site.contactEmail` | Where feedback and questions go. It appears on Support, Terms, Privacy and Refunds |
 | `site.legalReviewed` | Leave `false` until a lawyer has looked at the legal pages. While it is `false` they show a "draft" notice |
 | `apps[]` | Each app's name, text, features, accent colour, icon (`public/img/`), status and live link (`appUrl`) |
 
