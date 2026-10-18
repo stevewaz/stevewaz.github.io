@@ -1,11 +1,18 @@
 // Everything you are likely to change lives here: the name, the contact address, and each app's text and link.
 
+const contactEmail = 'stevewasielewski@gmail.com';
+const contactSubject = '[Waz Apps] Feedback';
+
 export const site = {
   /** A working name. Change it here and it changes everywhere. */
   name: 'Waz Apps',
   tagline: 'Simple apps for the way you actually work, play, cook and fish. Nothing to download from a store.',
   /** Where feedback and questions go (it appears on the Support, Terms, Privacy and Refunds pages). */
-  contactEmail: 'stevewasielewski@gmail.com',
+  contactEmail,
+  /** Every email link on the site pre-fills this subject, so a Gmail filter can match it ("subject:[Waz Apps]"). */
+  contactSubject,
+  /** The mailto: link used for every contact and feedback link. */
+  contactHref: `mailto:${contactEmail}?subject=${encodeURIComponent(contactSubject)}`,
   /** Show a "draft" notice on the legal pages until they have been reviewed. */
   legalReviewed: false,
 };

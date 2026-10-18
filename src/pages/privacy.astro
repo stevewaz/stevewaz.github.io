@@ -42,7 +42,7 @@ import { site, href } from '../config';
 
     <h2>Your choices</h2>
     <ul>
-      <li>You can ask us to delete your account and the information on our server by emailing <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.</li>
+      <li>You can ask us to delete your account and the information on our server by emailing <a href={site.contactHref}>{site.contactEmail}</a>.</li>
       <li>You can remove what an app keeps on your device by clearing its site data in your browser, or deleting the app.</li>
     </ul>
 
@@ -50,6 +50,6 @@ import { site, href } from '../config';
     <p>Family Game Night is made for families to play together. We do not knowingly collect personal information from children, and the solo games keep what they need on the device.</p>
 
     <h2>Changes and contact</h2>
-    <p>If we change how we handle information, we will update this page. Questions: <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.</p>
+    <p>If we change how we handle information, we will update this page. Questions: <a href={site.contactHref}>{site.contactEmail}</a>.</p>
   </section>
 </Base>
