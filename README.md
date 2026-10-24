@@ -18,7 +18,7 @@ npm run build      # writes dist/
 | `site.legalReviewed` | Leave `false` until a lawyer has looked at the legal pages. While it is `false` they show a "draft" notice |
 | `apps[]` | Each app's name, text, features, accent colour, icon (`public/img/`), status and live link (`appUrl`) |
 
-Each app gets its own page at `/<slug>/` (`/simple-kennel/`, `/coach-board/`, `/heirloom/`, `/family-game-night/`, `/fishlog/`) from
+Each app gets its own page at `/<slug>/` (`/simple-kennel/`, `/coach-board/`, `/heirloom/`, `/family-game-night/`) from
 `src/pages/[slug].astro`. Add an app by adding an entry to `apps`.
 
 ## Publishing
