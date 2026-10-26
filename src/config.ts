@@ -141,6 +141,31 @@ export const apps: App[] = [
     notYet: 'Coming soon: family matches, where everyone plays the same round whenever they are free.',
     account: 'Sign up with your name and an email address. It is how you will play family matches once they arrive.',
   },
+  {
+    slug: 'steady',
+    name: 'Steady',
+    short: 'Gentle, no-weights workouts, and a Road to 100 push-ups.',
+    audience: 'For people over 50',
+    accent: '#0F6B5A',
+    icon: 'img/steady.png',
+    appUrl: 'https://stevewaz.github.io/personal_train_blazor/',
+    status: 'Free on your device',
+    headline: 'Stay strong and steady, with nothing but your own body.',
+    intro: 'Short workouts you can do at home with no weights and no gym, and a plan that builds you up to 100 push-ups, squats, planks and more, at your own pace. Everything stays on your device.',
+    features: [
+      { title: 'Workouts that fit your day', text: 'Pick how long you have and how you feel. Strength, balance, heart and energy, and stretching, with a warm-up and cool-down.' },
+      { title: 'Easy on sensitive spots', text: 'Tell it about sore knees, back, shoulders or wrists, a wobbly balance, or not wanting to get down on the floor, and those moves are left out.' },
+      { title: 'Road to 100', text: 'Push-ups, squats, crunches, calf raises, glute bridges, hip hinges and planks. Start from a quick test or a number you already know, such as 25, and build up through 25, 50, 75 and 100.' },
+      { title: 'Build-up sets', text: 'Each session warms you up with lighter sets, then asks for one all-out set. Your best sets the next target.' },
+      { title: 'Animated demonstrations', text: 'A moving figure shows each exercise, with a pause button, and it starts paused if you prefer less motion.' },
+      { title: 'Build your own workout', text: 'Choose the exercises, the sets and the reps, up to 500, and save it to use again.' },
+      { title: 'Spoken cues, large text', text: 'Optional voice prompts, bigger text sizes, light and dark, and colour themes.' },
+      { title: 'Works offline', text: 'Your workouts and progress are saved on your device, so it works anywhere, even without a signal.' },
+    ],
+    good: ['Install it on any device with no app store', 'No weights, no gym, no account', 'Works with no internet'],
+    pricing: { title: 'Free on your device', text: 'Steady is free to use on your own device, with no account and no card.' },
+    notYet: 'Steady is new and the exercises have not yet been reviewed by a physiotherapist. Check with your doctor before starting a new exercise programme, and stop if anything hurts.',
+  },
 ];
 
 /** A link inside the site that works under any base path (a sub-path or the root of a domain). */
