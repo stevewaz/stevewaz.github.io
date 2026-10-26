@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, href } from '../config';
+const ask = `mailto:${site.contactEmail}?subject=${encodeURIComponent('[Waz Apps] Build an app')}`;
+---
+<Base title="Build an app" description="We can build your app and publish it to the Apple App Store and Google Play.">
+  <section class="wrap section narrow">
+    <h1>Have an app idea? We can build it.</h1>
+    <p class="lead">We design and build simple apps, then publish them to the Apple App Store and Google Play, as well as installing straight from a web link like the apps on this site.</p>
+    <p><a class="btn primary" href={ask}>Tell us about your idea</a></p>
+
+    <h2>How it works</h2>
+    <div class="grid three">
+      <div class="card"><h3>1. We talk it through</h3><p>You tell us who the app is for and what it needs to do. We keep the first version small and useful.</p></div>
+      <div class="card"><h3>2. We build it once</h3><p>One app that works on iPhone, iPad, Android and in the browser, and keeps working offline.</p></div>
+      <div class="card"><h3>3. We publish it</h3><p>We prepare the store listing, icon and screenshots, submit it, and look after updates.</p></div>
+    </div>
+
+    <h2>The app stores, plainly</h2>
+    <ul class="bullets">
+      <li><b>Your own developer account.</b> To put an app in a store under your name, you need an Apple Developer account (currently $99 a year) and a Google Play developer account (currently a one-time $25). We can guide you through setting them up. Those fees go to Apple and Google, not to us.</li>
+      <li><b>Review.</b> Apple and Google look at every app before it appears. We prepare for what they check, but we cannot promise how long it takes or that an app will be approved first time.</li>
+      <li><b>Not everyone needs a store.</b> A web app can be installed from a link with no review and no store fees, which is how the apps on this site work today. For some ideas that is all you need, and we will say so if it is.</li>
+    </ul>
+
+    <h2>Our own apps and the stores</h2>
+    <p>We are also preparing store versions of our own apps, so people who look in the App Store or Google Play can find them there. Until they are listed, <a href={href()}>open any app from this site</a> and add it to your Home Screen.</p>
+
+    <h2>Get in touch</h2>
+    <p>Tell us what you would like to make, who it is for, and whether you want it in the stores, on the web, or both. There is no cost to talk it over.</p>
+    <p><a class="btn primary" href={ask}>Email {site.contactEmail}</a></p>
+  </section>
+</Base>
