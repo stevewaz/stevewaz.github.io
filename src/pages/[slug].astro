@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import StoreBadges from '../components/StoreBadges.astro';
 import { apps, href, site } from '../config';
 export function getStaticPaths() {
   return apps.map((app) => ({ params: { slug: app.slug }, props: { app } }));
@@ -15,7 +16,7 @@ const { app } = Astro.props;
       <p class="lead">{app.intro}</p>
       <div class="cta">
         <a class="btn primary" href={href(app.slug + '/get/')}>Get {app.name}</a>
-        <a class="btn" href={app.appUrl}>Open it in your browser</a>
+        <a class="btn" href={app.appUrl}>Open on the web</a>
       </div>
       <ul class="ticks">{app.good.map((g) => <li>{g}</li>)}</ul>
     </div>
@@ -29,10 +30,10 @@ const { app } = Astro.props;
   </section>
 
   <section class="wrap section narrow" style={`--accent:${app.accent}`}>
-    <h2>Installs like an app, no store needed</h2>
-    <p>{app.name} is a progressive web app (PWA). Open it in your browser, add it to your Home Screen or desktop, and it gets its own icon and opens like any other app. It updates itself and keeps working when the internet drops.</p>
-    <p><a href={href('install/')}>How to install {app.name}</a></p>
-    <p class="note"><b>Coming to the App Store and Google Play.</b> We are preparing store versions of {app.name} for iPhone, iPad and Android. Until they are listed, installing from this page is the way to get it.</p>
+    <h2>On the web, iPhone, iPad and Android</h2>
+    <p>{app.name} works on the web today, in any modern browser, and keeps working when the internet drops. The iPhone, iPad and Android versions are coming to the Apple App Store and Google Play.</p>
+    <StoreBadges apple={app.stores?.apple} google={app.stores?.google} />
+    <p><a class="btn" href={app.appUrl}>Use {app.name} on the web</a></p>
   </section>
 
   <section class="band" style={`--accent:${app.accent}`}>

@@ -1,12 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
 import AppCard from '../components/AppCard.astro';
+import StoreBadges from '../components/StoreBadges.astro';
 import { site, apps, href } from '../config';
 ---
 <Base>
   <section class="hero">
     <div class="wrap">
-      <p class="eyebrow">Progressive web apps (PWAs)</p>
+      <p class="eyebrow">For the web, iPhone, iPad and Android</p>
       <h1>Simple apps for the way you actually work, play, cook and fish.</h1>
     </div>
   </section>
@@ -16,20 +17,21 @@ import { site, apps, href } from '../config';
     <div class="grid apps">
       {apps.map((a) => <AppCard app={a} />)}
     </div>
-    <p class="muted center" style="margin-top: 24px"><b>More apps are coming soon.</b> All of these apps are coming to the Apple App Store and Google Play. Until then, open one and add it to your Home Screen.</p>
+    <p class="muted center" style="margin-top: 24px"><b>More apps are coming soon.</b> Every app works on the web today and is coming to the Apple App Store and Google Play.</p>
   </section>
 
   <section class="band">
     <div class="wrap section">
-      <h2>What is a PWA?</h2>
-      <p class="lead narrow-lead">A progressive web app is a website that can be installed. You open it once in your browser, add it to your device, and from then on it has its own icon and opens like any other app. You get the app experience without a trip to the app store.</p>
+      <h2>On the web, iPhone, iPad and Android</h2>
+      <p class="lead narrow-lead">Every app works in your browser today, and the iPhone, iPad and Android versions are on their way to the stores.</p>
+      <StoreBadges />
       <div class="grid three six">
-        <div><h3>Nothing to download</h3><p>Open the link and you are in. There is no store listing to find and no large download to wait for.</p></div>
-        <div><h3>Installs like an app</h3><p>Add it to your Home Screen or desktop and it gets its own icon and opens on its own, ready whenever you are. <a href={href('install/')}>See how</a>.</p></div>
+        <div><h3>On the web</h3><p>Open the link and you are in, on your phone, tablet or computer. There is nothing to download or wait for.</p></div>
+        <div><h3>On iPhone and iPad</h3><p>Coming to the Apple App Store, so you can find and install it the usual way.</p></div>
+        <div><h3>On Android</h3><p>Coming to Google Play, with the same app and the same information.</p></div>
         <div><h3>Works offline</h3><p>Your information is saved on your device first, so a weak signal never stops you. It syncs when you are back online.</p></div>
-        <div><h3>Always up to date</h3><p>Updates arrive on their own, so everyone is on the latest version and nobody has to hunt for an update.</p></div>
-        <div><h3>On any device</h3><p>The same app on your phone, tablet and computer, with no separate versions to buy or keep up to date.</p></div>
-        <div><h3>Easy to remove</h3><p>If you ever want it gone, remove it from your Home Screen or desktop like any other app.</p></div>
+        <div><h3>Always up to date</h3><p>The web version updates on its own, and the store versions update through the store.</p></div>
+        <div><h3>On any device</h3><p>The same app on your phone, tablet and computer, with no separate versions to buy.</p></div>
       </div>
     </div>
   </section>

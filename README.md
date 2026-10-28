@@ -1,6 +1,6 @@
 # The apps site
 
-A small static site (Astro) that introduces the apps, shows how to install them without an app store, and holds the support,
+A small static site (Astro) that introduces the apps, shows where to get them (the web today, with App Store and Google Play placeholders), and holds the support,
 terms, privacy and refund pages. It is the page Stripe and customers will look at.
 
 ```bash

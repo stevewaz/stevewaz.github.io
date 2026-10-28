@@ -6,7 +6,7 @@ const contactSubject = '[Waz Apps] Feedback';
 export const site = {
   /** A working name. Change it here and it changes everywhere. */
   name: 'Waz Apps',
-  tagline: 'Simple apps for the way you actually work, play, cook and fish. Nothing to download from a store.',
+  tagline: 'Simple apps for the way you actually work, play, cook and fish. On the web, iPhone, iPad and Android.',
   /** Where feedback and questions go (it appears on the Support, Terms, Privacy and Refunds pages). */
   contactEmail,
   /** Every email link on the site pre-fills this subject, so a Gmail filter can match it ("subject:[Waz Apps]"). */
@@ -36,6 +36,8 @@ export interface App {
   notYet?: string;
   /** Set when the app asks people to sign up: what the first sign-up looks like. */
   account?: string;
+  /** The app's store listings. Leave a store out until it is live: its badge then reads "Coming soon". */
+  stores?: { apple?: string; google?: string };
 }
 
 export const apps: App[] = [
@@ -60,7 +62,7 @@ export const apps: App[] = [
       { title: 'Your whole team', text: 'The owner invites staff by email, and everyone sees the same up-to-date schedule on their own device.' },
       { title: 'Works offline', text: 'Everything is saved on the device first and syncs when it can, so a bad connection never stops you.' },
     ],
-    good: ['Install it on any device with no app store', 'Syncs between your staff\'s devices', 'Your data stays yours: export it any time'],
+    good: ['On the web, iPhone, iPad and Android', 'Syncs between your staff\'s devices', 'Your data stays yours: export it any time'],
     pricing: { title: 'Free for now', text: 'Free while we are in early access, for your whole team. A simple monthly price will be announced before launch, and you will get plenty of notice.' },
     notYet: 'Early access: we are working with our first kennels. Tell us what you need.',
     account: 'Simple Kennel uses an account so your whole team shares one schedule. The owner signs up first, then invites staff by email.',
@@ -86,7 +88,7 @@ export const apps: App[] = [
       { title: 'Join with a code', text: 'Coaches start the team and players join with a short code. No accounts to set up for each one.' },
       { title: 'Eight sports', text: 'Girls\' and boys\' lacrosse, basketball, volleyball, field hockey, ice hockey, soccer, football and flag football.' },
     ],
-    good: ['Install it on any device with no app store', 'Everyone on the team stays in step', 'Works offline'],
+    good: ['On the web, iPhone, iPad and Android', 'Everyone on the team stays in step', 'Works offline'],
     pricing: { title: 'Free for now', text: 'Free for coaches while we are in early access. Pricing for teams will be announced before launch.' },
     account: 'The coach signs up and starts the team. Players join with a short code, so they do not need an account.',
   },
@@ -110,7 +112,7 @@ export const apps: App[] = [
       { title: 'Light and dark', text: 'Easy on the eyes, in the kitchen or at night.' },
       { title: 'Works offline', text: 'It is all on your device, so it works anywhere, even without a signal.' },
     ],
-    good: ['Install it on any device with no app store', 'Works with no internet', 'Warm and simple'],
+    good: ['On the web, iPhone, iPad and Android', 'Works with no internet', 'Warm and simple'],
     pricing: { title: 'Free on your device', text: 'Using Heirloom on your own device is free. Sharing a family kitchen between phones is coming.' },
     notYet: 'Coming soon: share your recipes with family so everyone has the same book on their phone.',
     account: 'Sign up with your name and an email address. It is how you will share your recipe book with family once sharing arrives.',
@@ -136,7 +138,7 @@ export const apps: App[] = [
       { title: 'Roll or Bank', text: 'A push-your-luck dice game: keep what scores, then roll again or bank it.' },
       { title: 'Telephone Pictionary', text: 'Write, draw, describe and see how the phrase changed along the way.' },
     ],
-    good: ['Install it on any device with no app store', 'Solo games work offline', 'Easy for kids and grandparents'],
+    good: ['On the web, iPhone, iPad and Android', 'Solo games work offline', 'Easy for kids and grandparents'],
     pricing: { title: 'Free to play solo', text: 'The solo games are free. Playing against the family, turn by turn, is coming.' },
     notYet: 'Coming soon: family matches, where everyone plays the same round whenever they are free.',
     account: 'Sign up with your name and an email address. It is how you will play family matches once they arrive.',
@@ -162,7 +164,7 @@ export const apps: App[] = [
       { title: 'Spoken cues, large text', text: 'Optional voice prompts, bigger text sizes, light and dark, and colour themes.' },
       { title: 'Works offline', text: 'Your workouts and progress are saved on your device, so it works anywhere, even without a signal.' },
     ],
-    good: ['Install it on any device with no app store', 'No weights, no gym, no account', 'Works with no internet'],
+    good: ['On the web, iPhone, iPad and Android', 'No weights, no gym, no account', 'Works with no internet'],
     pricing: { title: 'Free on your device', text: 'Steady is free to use on your own device, with no account and no card.' },
     notYet: 'Steady is new and the exercises have not yet been reviewed by a physiotherapist. Check with your doctor before starting a new exercise programme, and stop if anything hurts.',
   },
@@ -188,7 +190,7 @@ export const apps: App[] = [
       { title: 'Sync across your devices', text: 'Sign in and your catches and trips are backed up and shared between your phone and tablet. Full-size photos stay on the device that took them. It is optional.' },
       { title: 'Works offline, light and dark', text: 'Your log, trips and insights work with no connection, and so does the map inside a downloaded region (Michigan and South Carolina to start). Weather and the online map layers need a connection.' },
     ],
-    good: ['Install it on any device with no app store', 'Your log and offline maps work with no signal', 'Optional account to back up and sync your devices'],
+    good: ['On the web, iPhone, iPad and Android', 'Your log and offline maps work with no signal', 'Optional account to back up and sync your devices'],
     pricing: { title: 'Free for now', text: 'FishLog is free to use while we are in early access. If pricing is introduced later, it will be announced well ahead of time.' },
     account: 'A free account backs up your catches and trips and syncs them between your devices. Your log also works on this device without one.',
   },
