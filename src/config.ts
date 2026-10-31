@@ -194,6 +194,30 @@ export const apps: App[] = [
     pricing: { title: 'Free for now', text: 'FishLog is free to use while we are in early access. If pricing is introduced later, it will be announced well ahead of time.' },
     account: 'A free account backs up your catches and trips and syncs them between your devices. Your log also works on this device without one.',
   },
+  {
+    slug: 'plow',
+    name: 'Plow',
+    short: 'A visit log for solo snow plow operators, with proof of service and simple invoices.',
+    audience: 'For plow operators',
+    accent: '#1F4F8F',
+    icon: 'img/plow.png',
+    appUrl: 'https://stevewaz.github.io/plow_blazor/',
+    status: 'Free on your device',
+    headline: 'Proof you plowed it, in one tap.',
+    intro: 'Log each visit with the time, your location, photos, the salt you used and the weather, so you can show you serviced the lot. Then bill your customers from the same log.',
+    features: [
+      { title: 'One-tap service visit', text: 'Tap a lot and the visit is logged with the date and time, your GPS position and whether you were at the lot, and the weather: temperature, wind, sky and snowfall over the last day.' },
+      { title: 'Plowed, salted, shoveled', text: 'Mark what you did, add the pounds of salt in a tap, and attach photos and notes.' },
+      { title: 'Share a visit', text: 'Send a visit as a message, with the time, place, weather and what was done, when a customer or property manager asks.' },
+      { title: 'Your lots, in route order', text: 'Keep each lot with its address and price per push, a shovel fee and notes, and move them up and down into the order you drive.' },
+      { title: 'Simple invoices', text: 'Each month, per lot: the visits, the amounts and a total, ready to print or send. The price on each visit is saved when you log it, so changing your rates later does not change past invoices.' },
+      { title: 'Getting paid', text: 'Add your Venmo, PayPal, Zelle, Square or Stripe details and they print on the invoice, with a Pay now link. Venmo and PayPal.Me links get the total filled in. Plow never handles the money.' },
+      { title: 'Works offline', text: 'Your lots, visits and photos are saved on your device in a real database, so it works in a parking lot with no signal. Weather needs a connection and is filled in when you have one.' },
+    ],
+    good: ['On the web, iPhone and iPad', 'Works with no signal', 'Plow never touches your payments'],
+    pricing: { title: 'Free while it is new', text: 'Plow is free to use on your own device while we are in early access. If pricing is introduced later, it will be announced well ahead of time.' },
+    notYet: 'Plow is new. Your data lives on your device only for now, with no backup or sync yet, so a lost or reset phone means lost records. A visit log is a record you keep, not legal advice, and it does not replace insurance.',
+  },
 ];
 
 /** A link inside the site that works under any base path (a sub-path or the root of a domain). */
