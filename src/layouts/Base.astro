@@ -1,10 +1,11 @@
 ---
-import { site, apps, href } from '../config';
+import { site, apps, appGroups, href } from '../config';
 import '../styles/global.css';
 interface Props { title?: string; description?: string; }
 const { title, description = site.tagline } = Astro.props;
 const full = title ? `${title} · ${site.name}` : site.name;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const grouped = appGroups.map((name) => ({ name, items: apps.filter((a) => a.group === name) })).filter((g) => g.items.length > 0);
 ---
 <!doctype html>
 <html lang="en">
@@ -25,7 +26,27 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       <div class="wrap bar">
         <a class="brand" href={href()}><span class="mark" aria-hidden="true">{site.name.slice(0, 1)}</span>{site.name}</a>
         <nav aria-label="Main">
-          {apps.map((a) => <a href={href(a.slug + '/')}>{a.name}</a>)}
+          <details class="menu">
+            <summary>Apps</summary>
+            <div class="menu-panel">
+              <div class="wrap menu-grid">
+                {grouped.map((g) => (
+                  <div class="menu-group">
+                    <h4>{g.name}</h4>
+                    {g.items.map((a) => (
+                      <a class="menu-app" href={href(a.slug + '/')}>
+                        <img src={href(a.icon)} alt="" width="32" height="32" />
+                        <span><b>{a.name}</b><small>{a.audience}</small></span>
+                      </a>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <div class="wrap menu-all"><a href={href() + '#apps'}>See all apps</a></div>
+            </div>
+          </details>
+          <a href={href('support/')}>Support</a>
+          <a href={href('build-an-app/')}>Build an app for you</a>
         </nav>
       </div>
     </header>
@@ -39,7 +60,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
           </div>
           <div>
             <h4>Apps</h4>
-            {apps.map((a) => <a href={href(a.slug + '/')}>{a.name}</a>)}
+            {grouped.map((g) => (
+              <>
+                <p class="foot-group">{g.name}</p>
+                {g.items.map((a) => <a href={href(a.slug + '/')}>{a.name}</a>)}
+              </>
+            ))}
           </div>
           <div>
             <h4>Help</h4>
@@ -57,5 +83,13 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
         <p class="small muted">© {new Date().getFullYear()} {site.name}</p>
       </div>
     </footer>
+    <script is:inline>
+      // The Apps menu is a plain <details>; close it on Escape, on a click outside it, and when a link is chosen.
+      var menu = document.querySelector('.menu');
+      if (menu) {
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menu.open) { menu.open = false; menu.querySelector('summary').focus(); } });
+        document.addEventListener('click', function (e) { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+      }
+    </script>
   </body>
 </html>

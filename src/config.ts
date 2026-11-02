@@ -17,8 +17,14 @@ export const site = {
   legalReviewed: false,
 };
 
+/** The headings the Apps menu and the footer list apps under, in the order they appear. Add a new one here when an app doesn't fit. */
+export const appGroups = ['Work', 'Family', 'Health and outdoors'] as const;
+export type AppGroup = (typeof appGroups)[number];
+
 export interface App {
   slug: string;
+  /** Which heading the app sits under in the Apps menu and the footer. */
+  group: AppGroup;
   name: string;
   short: string;
   audience: string;
@@ -43,6 +49,7 @@ export interface App {
 export const apps: App[] = [
   {
     slug: 'simple-kennel',
+    group: 'Work',
     name: 'Simple Kennel',
     short: 'Boarding, schedule, vet records and invoices for a small kennel.',
     audience: 'For small boarding kennels',
@@ -69,6 +76,7 @@ export const apps: App[] = [
   },
   {
     slug: 'coach-board',
+    group: 'Work',
     name: 'Coach Board',
     short: 'Design plays, keep the roster and schedule, and chat with your team.',
     audience: 'For coaches and teams',
@@ -94,6 +102,7 @@ export const apps: App[] = [
   },
   {
     slug: 'heirloom',
+    group: 'Family',
     name: 'Heirloom',
     short: 'The family recipe book, with a meal plan and shopping list.',
     audience: 'For home cooks and families',
@@ -119,6 +128,7 @@ export const apps: App[] = [
   },
   {
     slug: 'family-game-night',
+    group: 'Family',
     name: 'Family Game Night',
     short: 'Trivia, drawing and word games for the whole family.',
     audience: 'For families',
@@ -145,6 +155,7 @@ export const apps: App[] = [
   },
   {
     slug: 'steady',
+    group: 'Health and outdoors',
     name: 'Steady',
     short: 'Gentle, no-weights workouts, ready-made 100s, and a builder of your own.',
     audience: 'For people over 50',
@@ -170,6 +181,7 @@ export const apps: App[] = [
   },
   {
     slug: 'fishlog',
+    group: 'Health and outdoors',
     name: 'FishLog',
     short: 'A fishing journal with a catch log, trips, insights and an offline map.',
     audience: 'For anglers',
@@ -196,6 +208,7 @@ export const apps: App[] = [
   },
   {
     slug: 'plow',
+    group: 'Work',
     name: 'Plow',
     short: 'A visit log for solo snow plow operators, with proof of service and simple invoices.',
     audience: 'For plow operators',
