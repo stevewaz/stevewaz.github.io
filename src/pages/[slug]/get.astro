@@ -9,11 +9,11 @@ const { app } = Astro.props;
 let n = 0;
 const step = () => ++n;
 ---
-<Base title={`Get ${app.name}`} description={`How to get ${app.name} on the web, iPhone, iPad and Android. It is free for now, with no card.`}>
+<Base title={`Get ${app.name}`} description={`How to get ${app.name} on the web, iPhone, iPad and Android. It is in beta, with no card needed.`}>
   <section class="hero app-hero" style={`--accent:${app.accent}`}>
     <div class="wrap narrow">
       <img class="big-icon" src={href(app.icon)} alt={`${app.name} icon`} width="96" height="96" />
-      <p class="eyebrow">{`Free for now · ${app.account ? 'Free account' : 'No account'} · No card needed`}</p>
+      <p class="eyebrow">{`Beta · ${app.account ? 'Account' : 'No account'} · No card needed`}</p>
       <h1>Get {app.name}</h1>
       <p class="lead">Use {app.name} on the web today. The iPhone, iPad and Android apps are coming to the Apple App Store and Google Play.</p>
     </div>

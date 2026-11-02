@@ -49,7 +49,7 @@ export const apps: App[] = [
     accent: '#7B5EA7',
     icon: 'img/simple-kennel.png',
     appUrl: 'https://stevewaz.github.io/simple_kennel_blazor/',
-    status: 'Early access',
+    status: 'Beta',
     headline: 'Run your kennel from one simple board.',
     intro: 'Bookings, customers and pets, vaccination records, check-in and check-out, and invoices, all in one place, on any phone, tablet or computer. It keeps working when the internet drops.',
     features: [
@@ -63,8 +63,8 @@ export const apps: App[] = [
       { title: 'Works offline', text: 'Everything is saved on the device first and syncs when it can, so a bad connection never stops you.' },
     ],
     good: ['On the web, iPhone, iPad and Android', 'Syncs between your staff\'s devices', 'Your data stays yours: export it any time'],
-    pricing: { title: 'Free for now', text: 'Free while we are in early access, for your whole team. A simple monthly price will be announced before launch, and you will get plenty of notice.' },
-    notYet: 'Early access: we are working with our first kennels. Tell us what you need.',
+    pricing: { title: 'In beta', text: 'Simple Kennel is in beta, for your whole team. A simple monthly price will be announced before launch, and you will get plenty of notice.' },
+    notYet: 'Beta: we are working with our first kennels. Tell us what you need.',
     account: 'Simple Kennel uses an account so your whole team shares one schedule. The owner signs up first, then invites staff by email.',
   },
   {
@@ -75,7 +75,7 @@ export const apps: App[] = [
     accent: '#2AA9E0',
     icon: 'img/coach-board.png',
     appUrl: 'https://stevewaz.github.io/coach_board_blazor/',
-    status: 'Early access',
+    status: 'Beta',
     headline: 'Draw the play. Then watch it run.',
     intro: 'A play designer that actually moves, plus your roster, schedule and team chat. Built for youth and school coaches.',
     features: [
@@ -89,7 +89,7 @@ export const apps: App[] = [
       { title: 'Eight sports', text: 'Girls\' and boys\' lacrosse, basketball, volleyball, field hockey, ice hockey, soccer, football and flag football.' },
     ],
     good: ['On the web, iPhone, iPad and Android', 'Everyone on the team stays in step', 'Works offline'],
-    pricing: { title: 'Free for now', text: 'Free for coaches while we are in early access. Pricing for teams will be announced before launch.' },
+    pricing: { title: 'In beta', text: 'Coach Board is in beta for coaches. Pricing for teams will be announced before launch.' },
     account: 'The coach signs up and starts the team. Players join with a short code, so they do not need an account.',
   },
   {
@@ -100,7 +100,7 @@ export const apps: App[] = [
     accent: '#D67F48',
     icon: 'img/heirloom.png',
     appUrl: 'https://stevewaz.github.io/heirloom_blazor/',
-    status: 'Free on your device',
+    status: 'Beta',
     headline: 'The recipes that matter, kept together.',
     intro: 'Add, organize and pass down your family\'s recipes. Plan the week, and turn it into a shopping list sorted by store section.',
     features: [
@@ -113,7 +113,7 @@ export const apps: App[] = [
       { title: 'Works offline', text: 'It is all on your device, so it works anywhere, even without a signal.' },
     ],
     good: ['On the web, iPhone, iPad and Android', 'Works with no internet', 'Warm and simple'],
-    pricing: { title: 'Free on your device', text: 'Using Heirloom on your own device is free. Sharing a family kitchen between phones is coming.' },
+    pricing: { title: 'In beta', text: 'Heirloom is in beta and runs on your own device. Sharing a family kitchen between phones is coming.' },
     notYet: 'Coming soon: share your recipes with family so everyone has the same book on their phone.',
     account: 'Sign up with your name and an email address. It is how you will share your recipe book with family once sharing arrives.',
   },
@@ -125,7 +125,7 @@ export const apps: App[] = [
     accent: '#2E7D32',
     icon: 'img/family-game-night.png',
     appUrl: 'https://stevewaz.github.io/family_game_night_blazor/',
-    status: 'Solo games free',
+    status: 'Beta',
     headline: 'Game night, whenever everyone is free.',
     intro: 'Eight quick games to play on your own or pass around the family. No one has to be online at the same moment.',
     features: [
@@ -139,7 +139,7 @@ export const apps: App[] = [
       { title: 'Telephone Pictionary', text: 'Write, draw, describe and see how the phrase changed along the way.' },
     ],
     good: ['On the web, iPhone, iPad and Android', 'Solo games work offline', 'Easy for kids and grandparents'],
-    pricing: { title: 'Free to play solo', text: 'The solo games are free. Playing against the family, turn by turn, is coming.' },
+    pricing: { title: 'Solo games in beta', text: 'The solo games are in beta. Playing against the family, turn by turn, is coming.' },
     notYet: 'Coming soon: family matches, where everyone plays the same round whenever they are free.',
     account: 'Sign up with your name and an email address. It is how you will play family matches once they arrive.',
   },
@@ -151,7 +151,7 @@ export const apps: App[] = [
     accent: '#0F6B5A',
     icon: 'img/steady.png',
     appUrl: 'https://stevewaz.github.io/personal_train_blazor/',
-    status: 'Free on your device',
+    status: 'Beta',
     headline: 'Stay strong and steady, with nothing but your own body.',
     intro: 'Short workouts you can do at home with no weights and no gym, and ready-made workouts that take you to 100 push-ups, squats, planks and more, at your own pace. Everything stays on your device.',
     features: [
@@ -165,7 +165,7 @@ export const apps: App[] = [
       { title: 'Works offline', text: 'Your workouts and progress are saved on your device, so it works anywhere, even without a signal.' },
     ],
     good: ['On the web, iPhone, iPad and Android', 'No weights, no gym, no account', 'Works with no internet'],
-    pricing: { title: 'Free on your device', text: 'Steady is free to use on your own device, with no account and no card.' },
+    pricing: { title: 'In beta', text: 'Steady is in beta and runs on your own device, with no account and no card.' },
     notYet: 'Steady is new and the exercises have not yet been reviewed by a physiotherapist. Check with your doctor before starting a new exercise programme, and stop if anything hurts.',
   },
   {
@@ -176,7 +176,7 @@ export const apps: App[] = [
     accent: '#12525A',
     icon: 'img/fishlog.png',
     appUrl: 'https://stevewaz.github.io/fishlog_blazor/',
-    status: 'Free on your device',
+    status: 'Beta',
     headline: 'Every catch, every trip, in one simple log.',
     intro: 'Log your catches in seconds, group them into trips, and see what your fishing looks like over time. Works at the lake, even with no signal.',
     features: [
@@ -191,8 +191,8 @@ export const apps: App[] = [
       { title: 'Works offline, light and dark', text: 'Your log, trips and insights work with no connection, and so does the map inside a downloaded region (Michigan and South Carolina to start). Weather and the online map layers need a connection.' },
     ],
     good: ['On the web, iPhone, iPad and Android', 'Your log and offline maps work with no signal', 'Optional account to back up and sync your devices'],
-    pricing: { title: 'Free for now', text: 'FishLog is free to use while we are in early access. If pricing is introduced later, it will be announced well ahead of time.' },
-    account: 'A free account backs up your catches and trips and syncs them between your devices. Your log also works on this device without one.',
+    pricing: { title: 'In beta', text: 'FishLog is in beta. If pricing is introduced later, it will be announced well ahead of time.' },
+    account: 'An account backs up your catches and trips and syncs them between your devices. Your log also works on this device without one.',
   },
   {
     slug: 'plow',
@@ -202,7 +202,7 @@ export const apps: App[] = [
     accent: '#1F4F8F',
     icon: 'img/plow.png',
     appUrl: 'https://stevewaz.github.io/plow_blazor/',
-    status: 'Free on your device',
+    status: 'Beta',
     headline: 'Proof you plowed it, in one tap.',
     intro: 'Log each visit with the time, your location, photos, the salt you used and the weather, so you can show you serviced the lot. Then bill your customers from the same log.',
     features: [
@@ -215,7 +215,7 @@ export const apps: App[] = [
       { title: 'Works offline', text: 'Your lots, visits and photos are saved on your device in a real database, so it works in a parking lot with no signal. Weather needs a connection and is filled in when you have one.' },
     ],
     good: ['On the web, iPhone and iPad', 'Works with no signal', 'Plow never touches your payments'],
-    pricing: { title: 'Free while it is new', text: 'Plow is free to use on your own device while we are in early access. If pricing is introduced later, it will be announced well ahead of time.' },
+    pricing: { title: 'In beta', text: 'Plow is in beta and runs on your own device. If pricing is introduced later, it will be announced well ahead of time.' },
     notYet: 'Plow is new. Your data lives on your device only for now, with no backup or sync yet, so a lost or reset phone means lost records. A visit log is a record you keep, not legal advice, and it does not replace insurance.',
   },
 ];
