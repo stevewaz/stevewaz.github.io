@@ -14,6 +14,21 @@
             font-family: 'Inter', sans-serif;
             background-color: #f0f2f5; /* A light, soft gray for the background */
         }
+        @media print {
+            @page { margin: 0.5in; }
+            body { background: #fff !important; padding: 0 !important; font-size: 10.5pt; }
+            main { box-shadow: none !important; border-radius: 0 !important; max-width: none !important; }
+            header { border-radius: 0 !important; }
+            .shadow-sm { box-shadow: none !important; }
+            .bg-gray-50 { background: #fff !important; border-bottom: 1px solid #e5e7eb; border-radius: 0 !important; }
+            .mb-6 { margin-bottom: 0.6rem !important; }
+            .py-6 { padding-top: 0.8rem !important; padding-bottom: 0.4rem !important; }
+            h2 { font-size: 1.25rem !important; margin-bottom: 0.4rem !important; }
+            div.p-4, div.p-6, header { padding: 0.5rem 0.25rem !important; }
+            section, .p-4 { break-inside: avoid; }
+            .no-print { display: none !important; }
+            a { color: inherit !important; text-decoration: none !important; }
+        }
         .text-primary {
             color: #1a237e; /* A deep indigo as the primary color */
         }
@@ -37,6 +52,7 @@
                 <span class="hidden md:inline">|</span>
                 <span>803-307-9312</span>
             </div>
+            <button type="button" onclick="window.print()" class="no-print mt-4 px-4 py-2 rounded-full bg-white text-primary text-sm font-semibold shadow-sm hover:underline">Save as PDF</button>
         </header>
 
         <div class="p-6 md:p-8">
@@ -229,181 +245,27 @@
                     </ul>
                 </div>
                 
-                <!-- Experience Item -->
+                <!-- Earlier Experience -->
                 <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
-                        <h3 class="text-lg font-bold text-primary">Sr. Software Developer | The Benefit Company</h3>
-                        <span class="text-sm text-gray-500">June 2012 - December 2012</span>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-2">Columbia, SC</p>
+                    <h3 class="text-lg font-bold text-primary mb-2">Earlier Experience, 1996 - 2012</h3>
+                    <p class="text-sm text-gray-600 mb-2">Web, banking, logistics, CRM and Lotus Notes development in ASP.NET, VB.NET, C#, SQL Server and Oracle. Details on request.</p>
                     <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
-                        <li>Transitioned benefit management system from Classic ASP to ASP.NET MVC, using Entity Framework and modular design principles for data integrity and testability. Built responsive web experiences using jQuery and C#, enhancing user accessibility while aligning with HIPAA and security protocols.</li>
-                        <li>Maintained and extended legacy systems while architecting forward-looking replacements ensuring zero downtime and smooth migration.</li>
+                        <li><b>Sr. Software Developer | The Benefit Company</b>, Columbia, SC <span class="text-gray-500">(June 2012 - December 2012)</span></li>
+                        <li><b>Software Developer | Hawley, LLC</b>, Lexington, SC <span class="text-gray-500">(September 2011 - June 2012)</span></li>
+                        <li><b>Sr. Programmer | South Carolina State Federal Credit Union</b>, Columbia, SC <span class="text-gray-500">(March 2007 - September 2011)</span></li>
+                        <li><b>Sr. Developer | Stevens Aviation</b>, Greenville, SC <span class="text-gray-500">(March 2005 - March 2007)</span></li>
+                        <li><b>Sr. Developer | EBridge</b>, Greenville, SC <span class="text-gray-500">(June 2004 - March 2005)</span></li>
+                        <li><b>Sr. Developer | Hayssen</b>, Duncan, SC <span class="text-gray-500">(August 2003 - June 2004)</span></li>
+                        <li><b>Sr. Developer | Xtend Corporation</b>, Columbia, SC <span class="text-gray-500">(November 2002 - August 2003)</span></li>
+                        <li><b>Sr. Developer | Solutions Plus+</b>, Simpsonville, SC <span class="text-gray-500">(May 2001 - November 2002)</span></li>
+                        <li><b>ASP Developer | Innova Communications</b>, Clemson, SC (contract) <span class="text-gray-500">(April 2001 - May 2001)</span></li>
+                        <li><b>Developer | Metaprise</b>, Greenville, SC <span class="text-gray-500">(December 2000 - February 2001)</span></li>
+                        <li><b>Programmer | NewSouth</b>, Greenville, SC <span class="text-gray-500">(March 2000 - December 2000)</span></li>
+                        <li><b>Lotus Notes Developer | Norstan</b>, Columbia, SC <span class="text-gray-500">(February 1999 - February 2000)</span></li>
+                        <li><b>Smalltalk Developer | PMSC</b>, Columbia, SC <span class="text-gray-500">(August 1996 - February 1999)</span></li>
                     </ul>
                 </div>
-                
-                <!-- Experience Item -->
-                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
-                        <h3 class="text-lg font-bold text-primary">Software Developer | Hawley, LLC</h3>
-                        <span class="text-sm text-gray-500">September 2011 - June 2012</span>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-2">Lexington, SC</p>
-                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
-                        <li>Designed and deployed quality control applications for packing stations, architected on Windows 7 tablets using C# and SQL Server 2008.</li>
-                        <li>Engineered WMS (Warehouse Management System) add-ons for order picking, integrating Windows CE/7 with handheld devices and persistent backend logic.</li>
-                    </ul>
-                </div>
-                
-                <!-- Experience Item -->
-                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
-                        <h3 class="text-lg font-bold text-primary">Sr. Programmer | South Carolina State Federal Credit Union</h3>
-                        <span class="text-sm text-gray-500">March 2007 - September 2011</span>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-2">Columbia, SC</p>
-                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
-                        <li>Served as technical lead for SCU's online banking transformation via Q2, delivering secure, scalable customer experiences.</li>
-                        <li>Engineered add-ons for online banking using SDKs, extending platform capabilities without compromising core integrity.</li>
-                        <li>Designed critical batch programs and RED Flag compliance tools in VB.NET/Oracle, enhancing automation and fraud detection.</li>
-                        <li>Developed modular loan deferment and deposit-import programs with socket-level data ingestion and cross-database interoperability.</li>
-                    </ul>
-                </div>
-                
-                <!-- Experience Item -->
-                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
-                        <h3 class="text-lg font-bold text-primary">Sr. Developer | Stevens Aviation</h3>
-                        <span class="text-sm text-gray-500">March 2005 - March 2007</span>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-2">Greenville, SC</p>
-                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
-                        <li>Designed and launched an in-house CRM platform using ASP.NET/C# and SQL Server Express, driving pipeline visibility and predictive sales tracking.</li>
-                        <li>Architected a custom scheduling engine for aircraft arrivals/departures and service mapping, syncing operational logistics with hangar workflows.</li>
-                        <li>Led front-end and back-end development of new internet presence, reinforcing brand identity and customer engagement.</li>
-                    </ul>
-                </div>
-                
-                <!-- Experience Item -->
-                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
-                        <h3 class="text-lg font-bold text-primary">Sr. Developer | EBridge</h3>
-                        <span class="text-sm text-gray-500">June 2004 - March 2005</span>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-2">Greenville, SC</p>
-                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
-                        <li>Modernized quality analysis systems and developed custom time-reporting tools using ASP.NET/VB.NET and MySQL, integrating Lotus Notes for seamless workflow adoption.</li>
-                        <li>Created a web-based time import module for staffing platforms, streamlining data input across web and desktop clients.</li>
-                    </ul>
-                </div>
-                
-                <!-- Experience Item -->
-                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
-                        <h3 class="text-lg font-bold text-primary">Sr. Developer | Hayssen</h3>
-                        <span class="text-sm text-gray-500">August 2003 - June 2004</span>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-2">Duncan, SC</p>
-                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
-                        <li>Maintained and extended SalesLogix CRM, improving system interoperability across sales and management teams.</li>
-                        <li>Designed a data sync engine between AS-400 and SQL Server, ensuring real-time consistency across platforms.</li>
-                        <li>Created executive-facing reporting tools via ASP.NET and SQL Server, empowering sales strategy with live analytics.</li>
-                    </ul>
-                </div>
-                
-                <!-- Experience Item -->
-                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
-                        <h3 class="text-lg font-bold text-primary">Sr. Developer | Xtend Corporation</h3>
-                        <span class="text-sm text-gray-500">November 2002 - August 2003</span>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-2">Columbia, SC</p>
-                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
-                        <li>Developed modular LMS components with ASP.NET/C#, enhancing learning delivery for enterprise clients. Owned full-stack development responsibilities, from database design to UI optimization.</li>
-                        <li>Managed product evolution from Classic ASP to .NET, implementing clean migration paths and architectural reuse.</li>
-                    </ul>
-                </div>
-                
-                <!-- Experience Item -->
-                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
-                        <h3 class="text-lg font-bold text-primary">Sr. Developer | Solutions Plus+</h3>
-                        <span class="text-sm text-gray-500">May 2001 - November 2002</span>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-2">Simpsonville, SC</p>
-                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
-                        <li>Built a project tracking system using WinForms (VB.NET/C#) and SQL Server to enable lifecycle transparency and cost control.</li>
-                        <li>Led development of a web-based invoice automation platform, cutting client processing time by 50%.</li>
-                        <li>Delivered reporting dashboards for Verizon with ASP and Crystal Reports, bridging financial oversight with digital access.</li>
-                    </ul>
-                </div>
-                
-                <!-- Experience Item -->
-                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
-                        <h3 class="text-lg font-bold text-primary">ASP Developer | Innova Communications</h3>
-                        <span class="text-sm text-gray-500">April 2001 - May 2001</span>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-2">Clemson, SC (contract)</p>
-                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
-                        <li>Engineered an inventory/POS system using Classic ASP, Crystal Reports, and SQL Server, facilitating order tracking and cost optimization.</li>
-                    </ul>
-                </div>
-                
-                <!-- Experience Item -->
-                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
-                        <h3 class="text-lg font-bold text-primary">Developer | Metaprise</h3>
-                        <span class="text-sm text-gray-500">December 2000 - February 2001</span>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-2">Greenville, SC</p>
-                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
-                        <li>Customized Maximizer CRM in Lotus Notes for enterprise-grade security and client operations.</li>
-                        <li>Led Domino web development for regional security firms, aligning web UX with backend logic.</li>
-                    </ul>
-                </div>
-                
-                <!-- Experience Item -->
-                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
-                        <h3 class="text-lg font-bold text-primary">Programmer | NewSouth</h3>
-                        <span class="text-sm text-gray-500">March 2000 - December 2000</span>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-2">Greenville, SC</p>
-                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
-                        <li>Orchestrated middleware layers with ObjectSwitch, enabling seamless data movement between legacy billing systems and modern interfaces.</li>
-                    </ul>
-                </div>
-                
-                <!-- Experience Item -->
-                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
-                        <h3 class="text-lg font-bold text-primary">Lotus Notes Developer | Norstan</h3>
-                        <span class="text-sm text-gray-500">February 1999 - February 2000</span>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-2">Columbia, SC</p>
-                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
-                        <li>Delivered multiple Lotus Notes solutions: Complaint Tracker, Quote Builder, Order Entry, and Purchase Approval workflows.</li>
-                        <li>Designed and implemented role-based workflows across field sales, operations, and procurement.</li>
-                    </ul>
-                </div>
-                
-                <!-- Experience Item -->
-                <div class="mb-6 p-4 rounded-xl shadow-sm bg-gray-50">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-baseline">
-                        <h3 class="text-lg font-bold text-primary">Smalltalk Developer | PMSC</h3>
-                        <span class="text-sm text-gray-500">August 1996 - February 1999</span>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-2">Columbia, SC</p>
-                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
-                        <li>Managed and modified VisualAge Smalltalk code on the workstation and managed the Smalltalk Code in the Smalltalk library for the Client Services Group.</li>
-                        <li>Worked closely with management to help assign the tasks and reviewed GUI specs for the Workstation team.</li>
-                        <li>Developed a knowledge management solution for the client service group with Active Server Pages, Outlook 98 and MS Access.</li>
-                        <li>Developed and supported the worldwide release of a major P&C application using VisualAge for Smalltalk and various other tools.</li>
-                        <li>Member of the architect group that developed the methodology for the first release of the PMSC's product S3+. This product was used by major insurance companies in the business.</li>
-                    </ul>
-                </div>
-                
+
             </section>
             
             <!-- Education -->
