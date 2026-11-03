@@ -15,7 +15,7 @@
             background-color: #f0f2f5; /* A light, soft gray for the background */
         }
         @media print {
-            @page { margin: 0.5in; }
+            @page { margin: 0.45in; }
             body { background: #fff !important; padding: 0 !important; font-size: 10.5pt; }
             main { box-shadow: none !important; border-radius: 0 !important; max-width: none !important; }
             header { border-radius: 0 !important; }
@@ -25,7 +25,14 @@
             .py-6 { padding-top: 0.8rem !important; padding-bottom: 0.4rem !important; }
             h2 { font-size: 1.25rem !important; margin-bottom: 0.4rem !important; }
             div.p-4, div.p-6, header { padding: 0.5rem 0.25rem !important; }
-            section, .p-4 { break-inside: avoid; }
+            /* Let sections and cards run across pages (keeping them whole left big gaps); only keep a heading with what follows it and a bullet in one piece. */
+            h2, h3 { break-after: avoid; }
+            /* A printed page is narrower than the screen breakpoints, so force the wide layout: three skill columns and dates beside the titles. */
+            .grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 0.5rem !important; }
+            .md\:flex-row { flex-direction: row !important; justify-content: space-between !important; align-items: baseline !important; }
+            .text-sm { font-size: 0.85rem !important; }
+            li { break-inside: avoid; }
+            .md\:flex-row, p.mb-2 { break-after: avoid; }
             .no-print { display: none !important; }
             a { color: inherit !important; text-decoration: none !important; }
         }
