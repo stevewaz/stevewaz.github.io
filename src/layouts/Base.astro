@@ -45,6 +45,7 @@ const grouped = appGroups.map((name) => ({ name, items: apps.filter((a) => a.gro
               <div class="wrap menu-all"><a href={href() + '#apps'}>See all apps</a></div>
             </div>
           </details>
+          <a href={href('pricing/')}>Pricing</a>
           <a href={href('support/')}>Support</a>
         </nav>
       </div>
@@ -68,6 +69,7 @@ const grouped = appGroups.map((name) => ({ name, items: apps.filter((a) => a.gro
           </div>
           <div>
             <h4>Help</h4>
+            <a href={href('pricing/')}>Pricing</a>
             <a href={href('support/')}>Support</a>
             <a href={site.contactHref}>Send feedback</a>
           </div>

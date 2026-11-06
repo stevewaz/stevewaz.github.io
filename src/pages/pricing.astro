@@ -1,0 +1,76 @@
+---
+import Base from '../layouts/Base.astro';
+import { apps, appGroups, appPricing, pricingTrial, site, href } from '../config';
+
+const byGroup = appGroups
+  .map((name) => ({
+    name,
+    items: apps
+      .filter((a) => a.group === name)
+      .map((app) => ({ app, pricing: appPricing.find((p) => p.slug === app.slug) }))
+      .filter((x) => x.pricing),
+  }))
+  .filter((g) => g.items.length > 0);
+---
+<Base title="Pricing" description="Simple plans for each app. Everything is free during the beta.">
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Pricing</p>
+      <h1>Simple plans for each app</h1>
+      <p class="lead">Pick the app, then the size that fits. No per-person fees for your team or your players, and every app works offline.</p>
+      <p class="note"><b>Everything is free during the beta.</b> These are the prices we plan to charge afterwards. Nothing is charged today, and you will get plenty of notice before that changes.</p>
+    </div>
+  </section>
+
+  {byGroup.map((g) => (
+    <section class="wrap section">
+      <h2 class="price-group">{g.name}</h2>
+      {g.items.map(({ app, pricing }) => (
+        <div class="app-pricing" style={`--accent:${app.accent}`} id={app.slug}>
+          <div class="app-pricing-head">
+            <img src={href(app.icon)} alt="" width="48" height="48" />
+            <div>
+              <h3><a href={href(app.slug + '/')}>{app.name}</a></h3>
+              <p class="muted">{pricing.sizedBy}</p>
+            </div>
+          </div>
+          <div class="plans">
+            {pricing.plans.map((p) => (
+              <div class={`plan card${p.best ? ' best' : ''}${p.soon ? ' soon' : ''}`}>
+                <div class="plan-top">
+                  <h4>{p.name}</h4>
+                  {p.best && <span class="pill">Best value</span>}
+                  {p.soon && <span class="pill">Coming later</span>}
+                </div>
+                <div class="price">
+                  <strong>{p.price}</strong>
+                  {p.per && <span class="muted">{p.per}</span>}
+                </div>
+                <p class="muted">{p.blurb}</p>
+                <ul class="plan-list">{p.features.map((f) => <li>{f}</li>)}</ul>
+                {!p.soon && <a class={`btn${p.best ? ' primary' : ''}`} href={href(app.slug + '/')}>Try the beta</a>}
+              </div>
+            ))}
+          </div>
+          {pricing.note && <p class="muted small">{pricing.note}</p>}
+        </div>
+      ))}
+    </section>
+  ))}
+
+  <section class="band">
+    <div class="wrap section narrow">
+      <h2>Good to know</h2>
+      <h3>Is it really free right now?</h3>
+      <p>Yes. Every app is in beta and free to use while we get it right. Paid plans are not live yet.</p>
+      <h3>What will the trial be like?</h3>
+      <p>{pricingTrial} Your data stays yours, and you can export it any time.</p>
+      <h3>Do I pay for each app separately?</h3>
+      <p>Yes. Each app has its own plan, so you only pay for the ones you use.</p>
+      <h3>Do my staff or players pay?</h3>
+      <p>No. The plan is for the business, team or family. People you invite do not need to buy anything.</p>
+      <h3>What does an app cost that is not listed?</h3>
+      <p>Ask us. <a href={site.contactHref}>Email {site.contactEmail}</a>.</p>
+    </div>
+  </section>
+</Base>

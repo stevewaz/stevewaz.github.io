@@ -238,3 +238,135 @@ export const apps: App[] = [
 
 /** A link inside the site that works under any base path (a sub-path or the root of a domain). */
 export const href = (path = ''): string => import.meta.env.BASE_URL.replace(/\/$/, '') + '/' + path.replace(/^\//, '');
+
+// ---------------------------------------------------------------------------------------------------------------------------------
+// Pricing. These are the prices planned for after the beta. Nothing is charged today (see the note on the Pricing page), so keep the
+// wording on that page honest until billing exists. Prices are shown as written: change them here.
+
+export interface Plan {
+  name: string;
+  /** "$19", or a word such as "Later" when there is no price yet. */
+  price: string;
+  /** "/month", "/year"... Left out when there is no price. */
+  per?: string;
+  blurb: string;
+  features: string[];
+  /** The plan most people should start with. */
+  best?: boolean;
+  /** Not built yet: shown dimmed, with a "Coming later" label instead of a button. */
+  soon?: boolean;
+}
+
+export interface AppPricing {
+  slug: string;
+  /** What the plans are sized by, in a few words. */
+  sizedBy: string;
+  plans: Plan[];
+  note?: string;
+}
+
+/** Shown on every paid plan. */
+export const pricingTrial = 'Every paid plan will start with a free 14-day trial. Cancel anytime.';
+
+export const appPricing: AppPricing[] = [
+  {
+    slug: 'simple-kennel',
+    sizedBy: 'Sized by the number of runs',
+    plans: [
+      {
+        name: 'Starter', price: '$19', per: '/month',
+        blurb: 'For a small kennel run by one person.',
+        features: ['Up to 10 runs', 'One owner account', 'Schedule board that catches conflicts', 'Customers, pets and vaccine checks', 'Check-in, check-out and invoices', 'Works offline'],
+      },
+      {
+        name: 'Team', price: '$39', per: '/month', best: true,
+        blurb: 'For a kennel with staff who share one schedule.',
+        features: ['Everything in Starter', 'Up to 30 runs', 'Invite your whole team by email', 'Everyone sees the same schedule on their own device', 'QuickBooks CSV export'],
+      },
+    ],
+    note: 'More than 30 runs? Email us and we will work out a price.',
+  },
+  {
+    slug: 'coach-board',
+    sizedBy: 'Sized by the number of teams',
+    plans: [
+      {
+        name: 'Coach', price: '$8', per: '/month',
+        blurb: 'For a coach with one team.',
+        features: ['One team', 'Eight sports', 'Play designer and animated plays', 'Roster, schedule and reminders', 'Team chat', 'Players join with a code and need no account'],
+      },
+      {
+        name: 'Club', price: '$24', per: '/month', best: true,
+        blurb: 'For a club or a coach with several teams.',
+        features: ['Everything in Coach', 'Up to 10 teams'],
+      },
+    ],
+  },
+  {
+    slug: 'plow',
+    sizedBy: 'Sized by the number of lots',
+    plans: [
+      {
+        name: 'Solo', price: '$12', per: '/month', best: true,
+        blurb: 'For an owner-operator with their own truck.',
+        features: ['Up to 25 lots', 'One-tap visits with time, GPS, weather and photos', 'Proof report with a tamper-evident fingerprint', 'Snow or lawn pricing, invoices and texting', 'Works offline, with backups'],
+      },
+      {
+        name: 'Pro', price: '$24', per: '/month',
+        blurb: 'For a bigger route.',
+        features: ['Everything in Solo', 'Up to 100 lots'],
+      },
+      {
+        name: 'Crews', price: 'Later',
+        blurb: 'A separate app for dispatchers and drivers.',
+        features: ['Dispatch dashboard and live map', 'A driver app', 'A view for customers and property managers'],
+        soon: true,
+      },
+    ],
+  },
+  {
+    slug: 'heirloom',
+    sizedBy: 'One plan for the whole family',
+    plans: [
+      {
+        name: 'Plus', price: '$4', per: '/month', best: true,
+        blurb: 'Everything in Heirloom.',
+        features: ['Unlimited recipes', 'Scan a recipe card with your camera', 'Meal planning and a smart shopping list', 'Works offline'],
+      },
+    ],
+    note: 'Sharing a family kitchen between phones is on the way and will be included.',
+  },
+  {
+    slug: 'family-game-night',
+    sizedBy: 'One plan for the whole family',
+    plans: [
+      {
+        name: 'Family', price: '$5', per: '/month', best: true,
+        blurb: 'Every game, for everyone at home.',
+        features: ['All the solo games', 'Passing the phone around the table', 'Playing against the family, turn by turn, when it arrives'],
+      },
+    ],
+  },
+  {
+    slug: 'steady',
+    sizedBy: 'One plan, just for you',
+    plans: [
+      {
+        name: 'Plus', price: '$4', per: '/month', best: true,
+        blurb: 'Everything in Steady.',
+        features: ['Workouts that fit your day and how you feel', 'Easy on sensitive spots', 'The 100s and ready-made workouts', 'Animated demonstrations and spoken cues', 'No account needed'],
+      },
+    ],
+  },
+  {
+    slug: 'fishlog',
+    sizedBy: 'One plan, just for you',
+    plans: [
+      {
+        name: 'Plus', price: '$3', per: '/month', best: true,
+        blurb: 'Everything in FishLog.',
+        features: ['Unlimited catches and trips', 'Photos, insights, conditions and moon', 'A map for the water with saved spots', 'Sync across your devices'],
+      },
+    ],
+  },
+];

@@ -122,3 +122,23 @@ nav .menu-all a { color: var(--brand); font-weight: 650; }
 .store b { font-size: 1.05rem; font-weight: 650; }
 .store.soon { background: transparent; color: var(--muted, #667); border: 1.5px dashed var(--border); cursor: default; }
 a.store:hover { filter: brightness(1.2); }
+
+/* Pricing page */
+.price-group { margin-top: 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.app-pricing { margin: 28px 0 40px; }
+.app-pricing-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.app-pricing-head img { border-radius: 12px; flex: none; }
+.app-pricing-head h3 { margin: 0; font-size: 1.35rem; }
+.app-pricing-head h3 a { color: var(--ink); text-decoration: none; }
+.app-pricing-head p { margin: 0; }
+.plans { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 320px)); }
+.plan { display: flex; flex-direction: column; }
+.plan.best { border: 2px solid var(--accent); }
+.plan.soon { opacity: .75; border-style: dashed; box-shadow: none; }
+.plan-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.plan-top h4 { margin: 0; font-size: 1.1rem; }
+.plan .price strong { font-size: 2.2rem; }
+.plan-list { list-style: none; padding: 0; margin: 4px 0 18px; display: grid; gap: 8px; align-content: start; flex: 1; font-size: .95rem; }
+.plan-list li::before { content: "✓"; color: var(--accent); font-weight: 800; margin-right: 8px; }
+.plan .btn { text-align: center; }
+@media (max-width: 600px) { .plans { grid-template-columns: 1fr; } }
