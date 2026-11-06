@@ -271,50 +271,34 @@ export const pricingTrial = 'Every paid plan will start with a free 14-day trial
 export const appPricing: AppPricing[] = [
   {
     slug: 'simple-kennel',
-    sizedBy: 'Sized by the number of runs',
+    sizedBy: 'One price for your whole kennel',
     plans: [
       {
-        name: 'Starter', price: '$19', per: '/month',
-        blurb: 'For a small kennel run by one person.',
-        features: ['Up to 10 runs', 'One owner account', 'Schedule board that catches conflicts', 'Customers, pets and vaccine checks', 'Check-in, check-out and invoices', 'Works offline'],
-      },
-      {
-        name: 'Team', price: '$39', per: '/month', best: true,
-        blurb: 'For a kennel with staff who share one schedule.',
-        features: ['Everything in Starter', 'Up to 30 runs', 'Invite your whole team by email', 'Everyone sees the same schedule on their own device', 'QuickBooks CSV export'],
+        name: 'Kennel', price: '$25', per: '/month', best: true,
+        blurb: 'Everything in Simple Kennel, for you and your staff.',
+        features: ['Schedule board that catches conflicts', 'Customers, pets and vaccine checks', 'Check-in, check-out and invoices', 'Invite your whole team by email, so everyone sees the same schedule', 'QuickBooks CSV export', 'Works offline'],
       },
     ],
-    note: 'More than 30 runs? Email us and we will work out a price.',
   },
   {
     slug: 'coach-board',
-    sizedBy: 'Sized by the number of teams',
+    sizedBy: 'One price for you and your teams',
     plans: [
       {
-        name: 'Coach', price: '$8', per: '/month',
-        blurb: 'For a coach with one team.',
-        features: ['One team', 'Eight sports', 'Play designer and animated plays', 'Roster, schedule and reminders', 'Team chat', 'Players join with a code and need no account'],
-      },
-      {
-        name: 'Club', price: '$24', per: '/month', best: true,
-        blurb: 'For a club or a coach with several teams.',
-        features: ['Everything in Coach', 'Up to 10 teams'],
+        name: 'Coach', price: '$10', per: '/month', best: true,
+        blurb: 'Everything in Coach Board.',
+        features: ['Eight sports', 'Play designer and animated plays', 'Roster, schedule and reminders', 'Team chat', 'Players join with a code and need no account'],
       },
     ],
   },
   {
     slug: 'plow',
-    sizedBy: 'Sized by the number of lots',
+    sizedBy: 'One price for the whole season',
     plans: [
       {
-        name: 'Solo', price: '$12', per: '/month', best: true,
+        name: 'Season pass', price: '$25', per: '/season', best: true,
         blurb: 'For an owner-operator with their own truck.',
-        features: ['Up to 25 lots', 'One-tap visits with time, GPS, weather and photos', 'Proof report with a tamper-evident fingerprint', 'Snow or lawn pricing, invoices and texting', 'Works offline, with backups'],
-      },
-      {
-        name: 'Pro', price: '$24', per: '/month',
-        blurb: 'For a bigger route.',
-        features: ['Everything in Solo', 'Up to 100 lots'],
+        features: ['One-tap visits with time, GPS, weather and photos', 'Proof report with a tamper-evident fingerprint', 'Snow or lawn pricing, invoices and texting', 'Works offline, with backups'],
       },
       {
         name: 'Crews', price: 'Later',
