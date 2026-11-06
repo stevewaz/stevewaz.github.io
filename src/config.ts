@@ -313,7 +313,7 @@ export const appPricing: AppPricing[] = [
     sizedBy: 'One plan for the whole family',
     plans: [
       {
-        name: 'Plus', price: '$4', per: '/month', best: true,
+        name: 'Plus', price: '$1.99', per: '/month', best: true,
         blurb: 'Everything in Heirloom.',
         features: ['Unlimited recipes', 'Scan a recipe card with your camera', 'Meal planning and a smart shopping list', 'Works offline'],
       },
@@ -325,7 +325,7 @@ export const appPricing: AppPricing[] = [
     sizedBy: 'One plan for the whole family',
     plans: [
       {
-        name: 'Family', price: '$5', per: '/month', best: true,
+        name: 'Family', price: '$1.99', per: '/month', best: true,
         blurb: 'Every game, for everyone at home.',
         features: ['All the solo games', 'Passing the phone around the table', 'Playing against the family, turn by turn, when it arrives'],
       },
@@ -336,7 +336,7 @@ export const appPricing: AppPricing[] = [
     sizedBy: 'One plan, just for you',
     plans: [
       {
-        name: 'Plus', price: '$4', per: '/month', best: true,
+        name: 'Plus', price: '$1.99', per: '/month', best: true,
         blurb: 'Everything in Steady.',
         features: ['Workouts that fit your day and how you feel', 'Easy on sensitive spots', 'The 100s and ready-made workouts', 'Animated demonstrations and spoken cues', 'No account needed'],
       },
@@ -347,7 +347,7 @@ export const appPricing: AppPricing[] = [
     sizedBy: 'One plan, just for you',
     plans: [
       {
-        name: 'Plus', price: '$3', per: '/month', best: true,
+        name: 'Plus', price: '$1.99', per: '/month', best: true,
         blurb: 'Everything in FishLog.',
         features: ['Unlimited catches and trips', 'Photos, insights, conditions and moon', 'A map for the water with saved spots', 'Sync across your devices'],
       },
