@@ -31,9 +31,9 @@ const { app } = Astro.props;
 
   <section class="wrap section narrow" style={`--accent:${app.accent}`}>
     <h2>On the web, iPhone, iPad and Android</h2>
-    <p>{app.name} works on the web today, in any modern browser, and keeps working when the internet drops. The iPhone, iPad and Android versions are coming to the Apple App Store and Google Play.</p>
+    <p>The web version of {app.name} is for testing. You can try it in any modern browser, but what you enter may not be kept between visits. The iPhone, iPad and Android apps, which are where your information is kept, are coming to the Apple App Store and Google Play.</p>
     <StoreBadges apple={app.stores?.apple} google={app.stores?.google} />
-    <p><a class="btn" href={app.appUrl}>Use {app.name} on the web</a></p>
+    <p><a class="btn" href={app.appUrl}>Try {app.name} in your browser (for testing)</a></p>
   </section>
 
   <section class="band" style={`--accent:${app.accent}`}>

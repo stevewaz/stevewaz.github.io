@@ -48,7 +48,7 @@ const byGroup = appGroups
                 </div>
                 <p class="muted">{p.blurb}</p>
                 <ul class="plan-list">{p.features.map((f) => <li>{f}</li>)}</ul>
-                {!p.soon && <a class={`btn${p.best ? ' primary' : ''}`} href={href(app.slug + '/')}>Try the beta</a>}
+                {!p.soon && <a class={`btn${p.best ? ' primary' : ''}`} href={href(app.slug + '/')}>Try the web test version</a>}
               </div>
             ))}
           </div>
