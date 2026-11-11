@@ -30,8 +30,8 @@ const { app } = Astro.props;
   </section>
 
   <section class="wrap section narrow" style={`--accent:${app.accent}`}>
-    <h2>On the web, iPhone, iPad and Android</h2>
-    <p>The web version of {app.name} is for testing. You can try it in any modern browser, but what you enter may not be kept between visits. The iPhone, iPad and Android apps, which are where your information is kept, are coming to the Apple App Store and Google Play.</p>
+    <h2>On iPhone, iPad and Android, with a web version for testing</h2>
+    <p>The web version of {app.name} is for testing only. You can try it in any modern browser, but what you enter is not kept, and there is no sign-in or syncing there. The iPhone, iPad and Android apps, which are where your information is kept, are coming to the Apple App Store and Google Play.</p>
     <StoreBadges apple={app.stores?.apple} google={app.stores?.google} />
     <p><a class="btn" href={app.appUrl}>Try {app.name} in your browser (for testing)</a></p>
   </section>
